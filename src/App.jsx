@@ -74,14 +74,14 @@ export default function App() {
     }
   };
 
-  // Light/Dark mode state management
+  // Light/Dark mode state management (default to light mode)
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('srsma_theme');
       if (savedTheme) return savedTheme;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'light';
     }
-    return 'dark';
+    return 'light';
   });
 
   useEffect(() => {

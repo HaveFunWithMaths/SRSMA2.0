@@ -206,8 +206,84 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
           })}
         </div>
 
+        {/* WhatsApp Real-time Parent Transparency Preview & Comparison */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
+          {/* WhatsApp Report Card Visual */}
+          <div className="lg:col-span-5 bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 card-elevation-subtle relative overflow-hidden">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
+                  <MessageSquare className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-white">SRSMA Academic Mentor</h4>
+                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Verified Weekly Update to Parent
+                  </p>
+                </div>
+              </div>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">Sunday 6:30 PM</span>
+            </div>
+
+            {/* Chat bubble mock */}
+            <div className="mt-4 space-y-3 text-xs">
+              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-500/20 text-slate-800 dark:text-slate-200 space-y-2">
+                <p className="font-semibold text-emerald-800 dark:text-emerald-300">
+                  Respected Parents, weekly progress report for <span className="underline decoration-emerald-500 font-bold">Rohan S. (Batch JEE-27)</span>:
+                </p>
+                <div className="space-y-1 text-[11px] text-slate-700 dark:text-slate-300">
+                  <div className="flex justify-between">
+                    <span>• Rotational Motion CBT Test:</span>
+                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">84 / 100 (Class Rank 3)</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>• DPP Assignment Completion:</span>
+                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">100% (On-time)</strong>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>• 1-on-1 IITian Doubt Sessions:</span>
+                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">3 Resolved (Physics & Calc)</strong>
+                  </div>
+                </div>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 italic pt-1 border-t border-emerald-500/20">
+                  "Rohan is excelling in concept grasping. We are reinforcing multi-concept torque problems this Wednesday." — Er. Pradeep (IIT KGP)
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-850 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+              <span>Zero secrecy. 100% parental peace of mind.</span>
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold">#TransparencyFirst</span>
+            </div>
+          </div>
+
+          {/* Quick Pitch next to it */}
+          <div className="lg:col-span-7 space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-gold-700 dark:text-gold-400 bg-gold-500/10 dark:bg-gold-500/15 px-3 py-1 rounded-full border border-gold-500/30 inline-block">
+              Total Transparency Guarantee
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 dark:text-white leading-tight">
+              You Never Have to Wonder <span className="text-gradient-gold">How Your Child is Doing</span>
+            </h3>
+            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              At corporate coaching factories, parents are left in total dark until exam results drop or next installment fees are due. At SRSMA, our core IITian faculty maintains personal direct communication with parents every single week.
+            </p>
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800">
+                <div className="text-base font-black text-slate-900 dark:text-white">Every Sunday</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Automated granular scorecards</div>
+              </div>
+              <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800">
+                <div className="text-base font-black text-slate-900 dark:text-white">Open Door</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Meet Dean or Mentors anytime</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Side-by-side Parent Decision Matrix */}
-        <div className="bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-lg dark:shadow-2xl transition-colors duration-200">
+        <div className="bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden card-elevation-subtle transition-colors duration-200">
           <div className="p-6 sm:p-8 bg-slate-50 dark:bg-navy-900/60 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white">
@@ -225,10 +301,10 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm border-collapse">
               <thead>
-                <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-navy-950/90 text-slate-700 dark:text-slate-400 text-[11px] uppercase tracking-wider font-semibold">
+                <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-100/90 dark:bg-navy-950/90 text-slate-700 dark:text-slate-400 text-[11px] uppercase tracking-wider font-semibold">
                   <th className="py-4 px-6 w-1/4">Critical Factor</th>
                   <th className="py-4 px-6 w-[37.5%] text-rose-600 dark:text-rose-400">Typical Mega Coaching Factory</th>
-                  <th className="py-4 px-6 w-[37.5%] text-gold-800 dark:text-gold-300 bg-gold-500/10 dark:bg-gold-500/15">Shri Ram Smart Minds Academy</th>
+                  <th className="py-4 px-6 w-[37.5%] text-amber-700 dark:text-gold-300 bg-amber-500/10 dark:bg-gold-500/15 font-bold">Shri Ram Smart Minds Academy</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 dark:divide-slate-800/80">
@@ -243,9 +319,9 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
                         <span>{row.massFactory}</span>
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-slate-900 dark:text-slate-100 align-top bg-gold-500/10 dark:bg-gold-500/15">
+                    <td className="py-4 px-6 text-slate-900 dark:text-slate-100 align-top bg-amber-500/10 dark:bg-gold-500/15">
                       <div className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-trust-600 dark:text-trust-400 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-trust-400 shrink-0 mt-0.5" />
                         <span className="font-semibold">{row.srsma}</span>
                       </div>
                     </td>

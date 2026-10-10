@@ -30,32 +30,41 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
   const [selectedClass, setSelectedClass] = useState('11');
   const [selectedGoal, setSelectedGoal] = useState('jee');
   const [selectedPrep, setSelectedPrep] = useState('intermediate');
+  const [studentScore, setStudentScore] = useState(88); // 60 to 100 percentage slider
 
-  // Compute recommendation
+  // Compute recommendation & dynamic scholarship calculation based on score
   const getRecommendation = () => {
     let batchName = '2-Year Integrated JEE Excellence Batch';
     let batchCap = 'Max 30 Students';
-    let scholarshipRange = 'Up to 75% Merit Scholarship';
+    let baseScholarship = 50;
     let focus = 'First-principles mastery, NCERT alignment, and weekly CBT mock tests.';
 
     if (selectedPrep === 'advanced' || selectedClass === '12' || selectedClass === 'repeater') {
       batchName = 'SRSMA Arjuna Super-30 Cohort';
       batchCap = 'Strictly Capped at 30 Enrolled Students';
-      scholarshipRange = 'Up to 100% Merit Scholarship (Full Waiver)';
+      baseScholarship = 70;
       focus = 'Advanced multi-concept problem solving with Guest Olympiad faculty and direct Chief Mentor supervision.';
     } else if (selectedClass === '8' || selectedClass === '9' || selectedClass === '10') {
       batchName = 'Junior Foundation & Olympiad Accelerator';
       batchCap = 'Max 25 Students';
-      scholarshipRange = 'Up to 60% Foundation Scholarship';
+      baseScholarship = 40;
       focus = 'Mathematical rigor, PRMO/NSEJS exposure, and school board 95%+ guarantee.';
     } else if (selectedGoal === 'neet') {
       batchName = 'NEET Medical Comprehensive Ranker Batch';
       batchCap = 'Max 30 Students';
-      scholarshipRange = 'Up to 80% Merit Scholarship';
+      baseScholarship = 55;
       focus = 'Line-by-line NCERT diagrammatic mastery and high-speed Physics numerical shortcuts.';
     }
 
-    return { batchName, batchCap, scholarshipRange, focus };
+    // Dynamic slab adjustment based on slider score
+    let calculatedPercentage = Math.min(100, Math.round(baseScholarship * (studentScore / 85)));
+    if (studentScore >= 95) calculatedPercentage = Math.max(calculatedPercentage, 90);
+    if (studentScore >= 98 && selectedPrep === 'advanced') calculatedPercentage = 100;
+
+    let scholarshipRange = `Up to ${calculatedPercentage}% Merit Scholarship`;
+    if (calculatedPercentage >= 95) scholarshipRange = 'Up to 100% Full Fee Waiver';
+
+    return { batchName, batchCap, scholarshipRange, calculatedPercentage, focus };
   };
 
   const recommendation = getRecommendation();
@@ -166,10 +175,37 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
               </div>
             </div>
 
+            {/* Step 4: Estimated Previous Academic Score Slider */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center text-[11px] font-black">4</span>
+                  <span>Previous Exam / Target Score (%):</span>
+                </label>
+                <span className="text-sm font-black text-gold-600 dark:text-gold-400 bg-gold-500/10 dark:bg-gold-500/20 px-2.5 py-0.5 rounded-md border border-gold-500/30">
+                  {studentScore}%
+                </span>
+              </div>
+              <input
+                type="range"
+                min="60"
+                max="100"
+                value={studentScore}
+                onChange={(e) => setStudentScore(Number(e.target.value))}
+                className="w-full accent-gold-500 h-2 bg-slate-200 dark:bg-slate-700 rounded-lg cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+                <span>60% (Passing)</span>
+                <span>80% (First Class)</span>
+                <span>90%+ (Distinction)</span>
+                <span>100% (Centum)</span>
+              </div>
+            </div>
+
           </div>
 
           {/* Right Column: Dynamic Recommendation Card */}
-          <div className="lg:col-span-5 bg-white dark:bg-navy-950 border-2 border-gold-500/40 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-white dark:bg-navy-950 border-2 border-gold-500/40 rounded-3xl p-6 sm:p-8 card-elevation-subtle relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-2xl pointer-events-none -z-10" />
 
             <div className="space-y-4">
@@ -189,6 +225,23 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
                   {recommendation.focus}
+                </p>
+              </div>
+
+              {/* Dynamic Interactive Scholarship Meter */}
+              <div className="p-4 rounded-2xl bg-amber-500/10 dark:bg-gold-500/15 border border-gold-500/30 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Potential Merit Fee Waiver:</span>
+                  <span className="text-base font-black text-gold-700 dark:text-gold-300">{recommendation.calculatedPercentage}%</span>
+                </div>
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div
+                    className="bg-gradient-to-r from-amber-500 to-gold-400 h-full rounded-full transition-all duration-300"
+                    style={{ width: `${recommendation.calculatedPercentage}%` }}
+                  />
+                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">
+                  Based on your {studentScore}% score simulation. Final grant awarded via diagnostic score.
                 </p>
               </div>
 

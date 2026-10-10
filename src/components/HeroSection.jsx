@@ -113,7 +113,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
               {/* Subtle Glowing ambient card background */}
               <div className="absolute -inset-1.5 bg-gradient-to-r from-gold-500/20 to-blue-600/20 rounded-3xl blur-xl opacity-70"></div>
 
-              <div className="relative bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl p-5 sm:p-6 shadow-xl dark:shadow-2xl space-y-4 transition-colors duration-200">
+              <div className="relative bg-white dark:bg-navy-900 border border-slate-200/90 dark:border-slate-700/80 rounded-2xl p-5 sm:p-6 card-elevation-subtle space-y-4 transition-colors duration-200">
 
                 {/* Card Top Label */}
                 <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
@@ -135,7 +135,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                     title: 'JEE Main Results Highlight',
                     caption: 'Authentic SRSMA Classroom Batch Performance — 99.48 %ile Top Percentile'
                   })}
-                  className="group cursor-pointer relative rounded-xl overflow-hidden border border-gold-500/30 dark:border-gold-500/40 bg-slate-50 dark:bg-navy-950 p-4 transition-all hover:border-gold-500 hover:scale-[1.02] shadow-xs"
+                  className="group cursor-pointer relative rounded-xl overflow-hidden border border-amber-500/30 dark:border-gold-500/40 bg-slate-50 dark:bg-navy-950 p-4 transition-all hover:border-amber-500 card-lift-hover shadow-2xs"
                 >
                   <div className="flex items-center justify-between">
                     <div>
