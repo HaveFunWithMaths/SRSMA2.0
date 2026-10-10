@@ -1,0 +1,205 @@
+import React from 'react';
+import {
+  Award, CheckCircle2, Star, ShieldCheck, ArrowRight,
+  Sparkles, GraduationCap, Users, Calendar, HeartHandshake,
+  ExternalLink, MapPin
+} from 'lucide-react';
+
+export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpenLightbox }) {
+  const challengeUrl = 'https://exams.srsma.in/boardChallenge';
+
+  return (
+    <section
+      id="about-srsma"
+      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-navy-950 dark:via-[#081224] dark:to-navy-950 pt-6 pb-8 md:pt-8 md:pb-12 border-b border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white transition-colors duration-200"
+    >
+      {/* Backwards-compatibility anchor for #overview */}
+      <div id="overview" className="sr-only" />
+
+      {/* Atmospheric Ambient Glow Mesh */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[420px] bg-gradient-to-br from-gold-500/10 via-blue-500/5 to-indigo-500/10 dark:from-gold-500/15 dark:via-blue-600/10 dark:to-indigo-600/15 blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-20 right-10 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-gold-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
+        {/* Unified 2-Column Split Hero Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          {/* Left Column: Brand, Value Proposition & Direct CTAs */}
+          <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
+
+            {/* Top Admissions & Badge Strip */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-800 dark:text-gold-300 text-xs font-semibold shadow-xs">
+                <span className="flex h-2 w-2 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+                </span>
+                <span>Admissions 2027–2029 Open</span>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium shadow-xs">
+                <MapPin className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                <span>Sun City, Hyderabad</span>
+              </div>
+            </div>
+
+            {/* Main Title & Dynamic Tagline */}
+            <div className="space-y-2.5">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-slate-900 dark:text-white tracking-tight leading-[1.12]">
+                <span className="block">Shri Ram</span>
+                <span className="block">Smart Minds Academy</span>
+              </h1>
+
+              <p className="text-xl sm:text-2xl md:text-3xl font-display font-extrabold text-gradient-gold leading-snug">
+                Top Coaching with Personal Care, Not Heavy Stress
+              </p>
+            </div>
+
+            {/* Subtext */}
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-gold-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and weekly WhatsApp analytics.
+            </p>
+
+            {/* CTA Buttons Strip */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
+              <button
+                onClick={onOpenDiagnostic}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold-500 via-gold-600 to-gold-500 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-black text-sm tracking-wide shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5 whitespace-nowrap"
+              >
+                <span>Book 1-on-1 Consultation</span>
+                <ArrowRight className="w-4 h-4 text-navy-950 group-hover:translate-x-0.5 transition-transform" />
+              </button>
+
+              <a
+                href={challengeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-gold-500/60 bg-white dark:bg-navy-900/90 hover:bg-slate-50 dark:hover:bg-navy-800 text-slate-800 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <span>Board Challenge Test</span>
+                <ExternalLink className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+              </a>
+
+              <button
+                onClick={onExploreFaculty}
+                className="w-full sm:w-auto px-4 py-3.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
+              >
+                <span>Meet Faculty</span>
+                <Users className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+              </button>
+            </div>
+
+            {/* Guarantees & Trust Factors */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-600 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-slate-800/80">
+              <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
+                <ShieldCheck className="w-4 h-4 text-trust-600 dark:text-trust-400" />
+                <span>Max 30 Students Batch</span>
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-gold-600 dark:text-gold-400" />
+                <span>Direct IIT Doubt Solving</span>
+              </span>
+            </div>
+
+          </div>
+
+          {/* Right Column: High-Trust Verified Proof & Scorecard Spotlight */}
+          <div className="lg:col-span-5">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+
+              {/* Subtle Glowing ambient card background */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-gold-500/20 to-blue-600/20 rounded-3xl blur-xl opacity-70"></div>
+
+              <div className="relative bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl p-5 sm:p-6 shadow-xl dark:shadow-2xl space-y-4 transition-colors duration-200">
+
+                {/* Card Top Label */}
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-trust-500 animate-pulse"></span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
+                      Documented Academic Proof
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-semibold text-gold-700 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded-md border border-gold-500/30">
+                    Sun City Center
+                  </span>
+                </div>
+
+                {/* Score Spotlight Banner */}
+                <div
+                  onClick={() => onOpenLightbox({
+                    src: '/assets/images/JEEMain2026Results.png',
+                    title: 'JEE Main Results Highlight',
+                    caption: 'Authentic SRSMA Classroom Batch Performance — 99.48 %ile Top Percentile'
+                  })}
+                  className="group cursor-pointer relative rounded-xl overflow-hidden border border-gold-500/30 dark:border-gold-500/40 bg-slate-50 dark:bg-navy-950 p-4 transition-all hover:border-gold-500 hover:scale-[1.02] shadow-xs"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-gold-700 dark:text-gold-400 flex items-center gap-1">
+                        <Award className="w-3.5 h-3.5" />
+                        <span>Top JEE Main Score</span>
+                      </div>
+                      <div className="text-3xl sm:text-4xl font-display font-black text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-300 transition-colors">
+                        99.48 <span className="text-lg font-bold text-gold-600 dark:text-gold-400">%ile</span>
+                      </div>
+                      <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                        Exceptional conceptual mastery across Physics, Chemistry & Math.
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <span className="inline-block p-2.5 rounded-xl bg-gold-500/15 dark:bg-gold-500/20 text-gold-600 dark:text-gold-400 group-hover:scale-110 transition-transform shadow-xs">
+                        <Award className="w-6 h-6" />
+                      </span>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-medium">Click to zoom</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Proof Metrics Mini-Grid */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/70 border border-slate-200 dark:border-slate-800 shadow-xs">
+                    <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">1st Batch JEE Main</div>
+                    <div className="text-xl font-bold text-trust-600 dark:text-trust-400 mt-0.5">10 / 16 (62.5%)</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Premier qualifying ratio</div>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/70 border border-slate-200 dark:border-slate-800 shadow-xs">
+                    <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Board & IPE Toppers</div>
+                    <div className="text-xl font-bold text-blue-600 dark:text-blue-400 mt-0.5">Up to 98%</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">State Board & CBSE</div>
+                  </div>
+                </div>
+
+                {/* Faculty Mentors Spotlight Strip */}
+                <div className="pt-1">
+                  <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center justify-between">
+                    <span>Guided Personally By Core Alumni</span>
+                    <span className="text-[11px] text-gold-700 dark:text-gold-400 font-bold">Zero Junior Tutors</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-navy-950/90 border border-slate-200 dark:border-slate-800 text-xs shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <div className="flex -space-x-2 overflow-hidden">
+                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Amal M Das.png" alt="Mr. Amal M Das" />
+                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Thirumala.jpg" alt="Mr. Thirumala" />
+                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Ninad.jpg" alt="Mr. Ninad" />
+                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Brajesh.jpg" alt="Mr. Brajesh" />
+                      </div>
+                      <span className="text-slate-600 dark:text-slate-300 text-[11px] font-medium">IIT Kharagpur, IIT Madras, NIT Warangal</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
