@@ -6,11 +6,11 @@ import {
 
 export default function LocationContact() {
   return (
-    <footer id="contact" className="bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 pt-6 pb-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-200">
+    <footer id="contact" className="bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 pt-6 pb-6 border-t border-slate-200 dark:border-white/[0.08] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Top Info & Map Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-8 border-b border-slate-200 dark:border-slate-800">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-8 border-b border-slate-200 dark:border-white/[0.08]">
           
           {/* Left Contact Column */}
           <div className="lg:col-span-6 space-y-4">
@@ -24,20 +24,20 @@ export default function LocationContact() {
                 <h3 className="text-xl font-display font-black text-slate-900 dark:text-white tracking-tight">
                   Shri Ram Smart Minds Academy
                 </h3>
-                <p className="text-xs text-gold-700 dark:text-gold-400 font-semibold">
+                <p className="text-xs text-blue-700 dark:text-gold-300 font-semibold">
                   Premier IIT-JEE & NEET Academy • Sun City, Hyderabad
                 </p>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               Committed to personal mentorship, 100% IIT & NIT qualified faculty, and small batch sizes that ensure every single student receives world-class coaching.
             </p>
 
             {/* Address & Direct Details */}
             <div className="space-y-4 text-xs sm:text-sm">
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5 shadow-sm">
+                <div className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-blue-600 dark:text-gold-300 shrink-0 mt-0.5 shadow-sm">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ export default function LocationContact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-trust-600 dark:text-trust-400 shrink-0 mt-0.5 shadow-sm">
+                <div className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-trust-600 dark:text-trust-400 shrink-0 mt-0.5 shadow-sm">
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <div>
@@ -66,7 +66,7 @@ export default function LocationContact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5 shadow-sm">
+                <div className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-blue-600 dark:text-gold-300 shrink-0 mt-0.5 shadow-sm">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ export default function LocationContact() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5 shadow-sm">
+                <div className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-blue-600 dark:text-gold-300 shrink-0 mt-0.5 shadow-sm">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function LocationContact() {
                 href="https://www.youtube.com/@ShriRamSmartMindsAcademy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-rose-500 dark:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
+                className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-rose-500 dark:text-rose-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
@@ -107,7 +107,7 @@ export default function LocationContact() {
                 href="https://www.facebook.com/shriramsma/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-blue-600 dark:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
+                className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-blue-600 dark:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -116,7 +116,7 @@ export default function LocationContact() {
                 href="https://www.linkedin.com/company/shriramsma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 text-sky-600 dark:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
+                className="p-2 rounded-lg bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] text-sky-600 dark:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function LocationContact() {
 
           {/* Right Map Column */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-4">
-            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-xl bg-white dark:bg-navy-900 relative">
+            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-white/[0.08] shadow-md dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_15px_30px_-10px_rgba(0,0,0,0.6)] bg-white dark:bg-navy-900 relative">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.161884303204!2d78.3956354!3d17.355941599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971f6d679dcb%3A0x8488bc0c7b4a1a5b!2sShri%20Ram%20Smart%20Minds%20Academy!5e0!3m2!1sen!2sin!4v1764562833991!5m2!1sen!2sin"
                 width="100%"
@@ -147,7 +147,7 @@ export default function LocationContact() {
                 href="https://share.google/pHNCn01ZzjrcT5vIS"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3 px-4 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs tracking-wide shadow-md transition-all flex items-center justify-center gap-2"
+                className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs tracking-wide shadow-md shadow-orange-500/25 dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne transition-all flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4" />
                 <span>Get Driving Directions (Google Maps)</span>
@@ -164,8 +164,8 @@ export default function LocationContact() {
               </a>
             </div>
 
-            <div className="text-xs text-slate-600 dark:text-slate-400 bg-white dark:bg-navy-900/60 p-3 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-2 shadow-sm">
-              <MapPin className="w-4 h-4 text-gold-600 dark:text-gold-400 shrink-0" />
+            <div className="text-xs text-slate-600 dark:text-slate-300 bg-white dark:bg-navy-900/60 p-3 rounded-xl border border-slate-200 dark:border-white/[0.08] flex items-center gap-2 shadow-sm">
+              <MapPin className="w-4 h-4 text-blue-600 dark:text-gold-300 shrink-0" />
               <span>Conveniently accessible from Bandlaguda Jagir, Sun City, Langer Houz, Rajendranagar, and Mehdipatnam.</span>
             </div>
 

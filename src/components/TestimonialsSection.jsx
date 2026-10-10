@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:border-gold-500/35 dark:text-gold-200 dark:shadow-[0_0_15px_-4px_rgba(245,158,11,0.2)] text-xs font-semibold uppercase tracking-wider">
             <Quote className="w-3.5 h-3.5" />
             <span>Parent & Student Voices</span>
           </div>
@@ -82,26 +82,26 @@ export default function TestimonialsSection() {
           href="https://share.google/pHNCn01ZzjrcT5vIS"
           target="_blank"
           rel="noopener noreferrer"
-          className="mb-5 max-w-md mx-auto p-4 rounded-2xl bg-slate-50 dark:bg-navy-950 border border-gold-500/25 dark:border-slate-800 flex items-center justify-between shadow-sm hover:border-gold-500/60 hover:shadow-md transition-all group cursor-pointer"
+          className="mb-5 max-w-md mx-auto p-4 rounded-2xl bg-slate-50 dark:bg-navy-950 border border-blue-200/80 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)] flex items-center justify-between shadow-sm hover:border-blue-400 dark:hover:border-gold-500/40 dark:hover:shadow-[0_0_20px_-5px_rgba(245,158,11,0.2)] transition-all group cursor-pointer"
           title="Read our Google Reviews"
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-xs font-black text-blue-500 text-xl group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] flex items-center justify-center shadow-xs font-black text-blue-500 text-xl group-hover:scale-105 transition-transform">
               G
             </div>
             <div>
-              <div className="flex items-center gap-1.5 text-gold-500">
+              <div className="flex items-center gap-1.5 text-amber-500">
                 <span className="text-base font-black text-slate-900 dark:text-white">4.9</span>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-gold-500 text-gold-500" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                   ))}
                 </div>
               </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">Verified Google Business Reviews</p>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 group-hover:text-blue-700 dark:group-hover:text-gold-300 transition-colors">Verified Google Business Reviews</p>
             </div>
           </div>
-          <span className="text-xs font-bold text-trust-600 dark:text-trust-400 bg-trust-500/15 px-2.5 py-1 rounded-lg border border-trust-500/30">
+          <span className="text-xs font-bold text-trust-600 dark:text-trust-300 bg-trust-500/15 px-2.5 py-1 rounded-lg border border-trust-500/30">
             100% Genuine
           </span>
         </a>
@@ -112,8 +112,8 @@ export default function TestimonialsSection() {
             onClick={() => setFilter('all')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filter === 'all'
-                ? 'bg-gold-500 text-navy-950 shadow-md'
-                : 'bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800'
+                ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne shadow-md'
+                : 'bg-slate-100 dark:bg-navy-950/80 text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-white border border-slate-200 dark:border-white/[0.08]'
             }`}
           >
             All Reviews ({TESTIMONIALS.length})
@@ -122,8 +122,8 @@ export default function TestimonialsSection() {
             onClick={() => setFilter('parent')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filter === 'parent'
-                ? 'bg-gold-500 text-navy-950 shadow-md'
-                : 'bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800'
+                ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne shadow-md'
+                : 'bg-slate-100 dark:bg-navy-950/80 text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-white border border-slate-200 dark:border-white/[0.08]'
             }`}
           >
             Parents & Principals
@@ -132,8 +132,8 @@ export default function TestimonialsSection() {
             onClick={() => setFilter('student')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filter === 'student'
-                ? 'bg-gold-500 text-navy-950 shadow-md'
-                : 'bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800'
+                ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne shadow-md'
+                : 'bg-slate-100 dark:bg-navy-950/80 text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-white border border-slate-200 dark:border-white/[0.08]'
             }`}
           >
             Student Aspirants
@@ -145,24 +145,24 @@ export default function TestimonialsSection() {
           {filteredList.map((item, idx) => (
             <div
               key={idx}
-              className="bg-slate-50/70 dark:bg-navy-950 border border-slate-200 dark:border-slate-800 hover:border-gold-500/40 rounded-2xl p-6 shadow-xs hover:shadow-md dark:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+              className="bg-slate-50/70 dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] hover:border-gold-500/40 dark:hover:border-gold-500/40 rounded-2xl p-6 shadow-xs hover:shadow-md dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_0_25px_-5px_rgba(245,158,11,0.2)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
                 {/* Rating stars */}
-                <div className="flex items-center gap-1 text-gold-500 dark:text-gold-400 mb-4">
+                <div className="flex items-center gap-1 text-gold-500 dark:text-gold-300 mb-4">
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-gold-500 dark:fill-gold-400" />
+                    <Star key={i} className="w-4 h-4 fill-gold-500 dark:fill-gold-300" />
                   ))}
                 </div>
 
                 {/* Quote text */}
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed italic">
                   "{item.quote}"
                 </p>
               </div>
 
               {/* Author info */}
-              <div className="flex items-center gap-3.5 mt-6 pt-4 border-t border-slate-200 dark:border-slate-800/80">
+              <div className="flex items-center gap-3.5 mt-6 pt-4 border-t border-slate-200 dark:border-white/[0.08]">
                 <div className="w-12 h-12 rounded-full overflow-hidden border border-gold-500/40 bg-slate-100 dark:bg-navy-900 shrink-0">
                   <img
                     src={item.avatar}
@@ -179,7 +179,7 @@ export default function TestimonialsSection() {
                   <h4 className="font-display font-bold text-slate-900 dark:text-white text-sm">
                     {item.name}
                   </h4>
-                  <p className="text-[11px] text-gold-700 dark:text-gold-400 font-medium">
+                  <p className="text-[11px] text-gold-700 dark:text-gold-300 font-medium">
                     {item.role}
                   </p>
                 </div>
@@ -189,14 +189,14 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Trust Badges bottom */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800/80 pt-8">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-white/[0.08] pt-8">
           <span className="flex items-center gap-1.5">
-            <CheckCircle className="w-4 h-4 text-trust-600 dark:text-trust-500" />
+            <CheckCircle className="w-4 h-4 text-trust-600 dark:text-trust-400" />
             <span>100% Genuine Enrolled Student Reviews</span>
           </span>
           <span>•</span>
           <span className="flex items-center gap-1.5">
-            <Award className="w-4 h-4 text-gold-600 dark:text-gold-400" />
+            <Award className="w-4 h-4 text-gold-600 dark:text-gold-300" />
             <span>Verified Sun City Community Feedback</span>
           </span>
         </div>

@@ -343,7 +343,7 @@ export default function StudentResourcesPortal({
             {onOpenDiagnostic && selectedClass !== 'Class8' && selectedClass !== 'Class9' && (
               <button
                 onClick={onOpenDiagnostic}
-                className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold text-xs shadow-sm hover:shadow-md transition-all active:scale-95"
+                className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white dark:from-gold-500 dark:to-gold-600 dark:text-navy-950 font-bold text-xs shadow-sm hover:shadow-md transition-all active:scale-95"
               >
                 <Trophy className="w-3.5 h-3.5" />
                 <span>Diagnostic Test</span>
@@ -376,7 +376,7 @@ export default function StudentResourcesPortal({
 
             {/* Quick Stats Pill (Glassmorphic) */}
             <div className="backdrop-blur-2xl bg-white/70 dark:bg-navy-900/70 p-4 sm:p-5 rounded-3xl border border-white/80 dark:border-white/10 shadow-xl shadow-navy-950/5 flex items-center gap-4 transition-all hover:shadow-2xl">
-              <div className="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-600 dark:text-gold-400 flex items-center justify-center font-extrabold text-xl shadow-inner">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 dark:bg-gold-500/20 dark:text-gold-400 flex items-center justify-center font-extrabold text-xl shadow-inner">
                 <BookOpen className="w-6 h-6" />
               </div>
               <div>
@@ -517,14 +517,14 @@ export default function StudentResourcesPortal({
 
           {/* Search Input with Focus Glow */}
           <div className="relative w-full md:w-80 group">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-gold-500 transition-colors" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 dark:group-focus-within:text-gold-500 transition-colors" />
             <input
               ref={searchInputRef}
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={`Search topics in ${activeSubject === 'All' ? selectedClass : activeSubject}...`}
-              className="w-full pl-9 pr-9 py-2 rounded-2xl bg-slate-100/80 dark:bg-navy-950/80 border border-slate-200/70 dark:border-white/10 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 transition-all shadow-inner"
+              className="w-full pl-9 pr-9 py-2 rounded-2xl bg-slate-100/80 dark:bg-navy-950/80 border border-slate-200/70 dark:border-white/10 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 dark:focus:ring-gold-500/50 dark:focus:border-gold-500 transition-all shadow-inner"
             />
             {searchQuery && (
               <button
@@ -600,7 +600,7 @@ export default function StudentResourcesPortal({
           {/* Empty State */}
           {!loading && !error && groupedByDate.length === 0 && (
             <div className="p-12 text-center backdrop-blur-xl bg-white/70 dark:bg-navy-900/70 rounded-3xl border border-slate-200 dark:border-white/10 space-y-4 shadow-sm">
-              <div className="w-14 h-14 mx-auto rounded-2xl bg-gold-500/10 text-gold-500 flex items-center justify-center">
+              <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-50 text-blue-600 dark:bg-gold-500/10 dark:text-gold-500 flex items-center justify-center">
                 <Search className="w-7 h-7" />
               </div>
               <h3 className="font-display font-extrabold text-lg text-slate-900 dark:text-white">
@@ -618,7 +618,7 @@ export default function StudentResourcesPortal({
                     setActiveSubject('All');
                     setResourceTypeFilter('all');
                   }}
-                  className="px-4 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs shadow-sm hover:shadow-md active:scale-95 transition-all"
+                  className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white dark:bg-gold-500 dark:hover:bg-gold-400 dark:text-navy-950 font-bold text-xs shadow-sm hover:shadow-md active:scale-95 transition-all"
                 >
                   Clear All Filters
                 </button>
@@ -640,15 +640,15 @@ export default function StudentResourcesPortal({
 
                   {/* Pulsing Glowing Timeline Node */}
                   <div className="absolute -left-[31px] sm:-left-[39px] top-1 flex items-center justify-center">
-                    <div className="w-6 h-6 rounded-full bg-gold-500/25 animate-ping absolute" />
-                    <div className="w-4 h-4 rounded-full bg-gold-400/40 blur-xs absolute" />
-                    <div className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 border-2 border-white dark:border-navy-950 shadow-md relative z-10 transition-transform group-hover/timeline:scale-125" />
+                    <div className="w-6 h-6 rounded-full bg-blue-500/25 dark:bg-gold-500/25 animate-ping absolute" />
+                    <div className="w-4 h-4 rounded-full bg-blue-400/40 dark:bg-gold-400/40 blur-xs absolute" />
+                    <div className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-gold-400 dark:to-gold-600 border-2 border-white dark:border-navy-950 shadow-md relative z-10 transition-transform group-hover/timeline:scale-125" />
                   </div>
 
                   {/* Date Header with Glassmorphic Pill */}
                   <div className="flex items-center gap-2 mb-3">
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl backdrop-blur-md bg-white/80 dark:bg-navy-800/80 border border-slate-200/80 dark:border-white/10 text-slate-700 dark:text-slate-300 font-bold text-xs shadow-xs">
-                      <Calendar className="w-3.5 h-3.5 text-gold-500" />
+                      <Calendar className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
                       <span>{group.displayDate}</span>
                     </div>
                   </div>
@@ -705,7 +705,7 @@ export default function StudentResourcesPortal({
                                       href={notesUrl}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs shadow-sm hover:shadow-md transition-all active:scale-95 group/btn"
+                                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:hover:from-gold-200 dark:hover:to-gold-400 dark:text-navy-950 font-bold text-xs shadow-sm hover:shadow-md dark:shadow-glow-champagne transition-all active:scale-95 group/btn"
                                     >
                                       <FileText className="w-3.5 h-3.5" />
                                       <span>View Notes</span>
@@ -725,7 +725,7 @@ export default function StudentResourcesPortal({
 
                           {/* Assignment Card (Ultra-Modern Glassmorphic with Micro-Interaction Toggle) */}
                           {hasAssignment && (resourceTypeFilter === 'all' || resourceTypeFilter === 'assignments') && (
-                            <div className="group/card relative rounded-3xl p-[1px] bg-gradient-to-br from-slate-200/90 via-slate-100/50 to-transparent dark:from-white/15 dark:via-white/5 dark:to-transparent hover:from-gold-500/40 hover:via-gold-500/20 hover:to-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
+                            <div className="group/card relative rounded-3xl p-[1px] bg-gradient-to-br from-slate-200/90 via-slate-100/50 to-transparent dark:from-white/15 dark:via-white/5 dark:to-transparent hover:from-blue-500/40 hover:via-blue-500/20 hover:to-transparent dark:hover:from-gold-500/40 dark:hover:via-gold-500/20 dark:hover:to-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1">
                               <div className="rounded-[23px] backdrop-blur-2xl bg-white/85 dark:bg-navy-900/80 p-5 flex flex-col justify-between gap-4 h-full relative overflow-hidden">
 
                                 {/* Soft hover glow background */}
@@ -738,7 +738,7 @@ export default function StudentResourcesPortal({
 
                                 <div className="space-y-2 relative z-10">
                                   <div className="flex items-center justify-between gap-2">
-                                    <span className="inline-flex items-center gap-1 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-gold-500/15 text-gold-700 dark:text-gold-300 border border-gold-500/30 shadow-xs">
+                                    <span className="inline-flex items-center gap-1 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 dark:bg-gold-500/15 dark:text-gold-200 dark:border-gold-500/35 shadow-xs">
                                       {item.subject} Assignment
                                     </span>
 
@@ -913,13 +913,13 @@ export default function StudentResourcesPortal({
                     <button
                       key="search-btn"
                       onClick={() => setIsStickySearchOpen(true)}
-                      className={`p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-600 dark:text-slate-300 transition-colors active:scale-95 relative ${searchQuery ? 'bg-gold-500/20 text-gold-600 dark:text-gold-400' : ''
+                      className={`p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-600 dark:text-slate-300 transition-colors active:scale-95 relative ${searchQuery ? 'bg-blue-50 text-blue-600 dark:bg-gold-500/20 dark:text-gold-400' : ''
                         }`}
                       title={searchQuery ? `Filtered: "${searchQuery}"` : "Quick Search"}
                     >
                       <Search className="w-4 h-4" />
                       {searchQuery && (
-                        <span className="w-2 h-2 rounded-full bg-gold-500 absolute top-1 right-1 animate-pulse" />
+                        <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-gold-500 absolute top-1 right-1 animate-pulse" />
                       )}
                     </button>
                   )}
@@ -928,7 +928,7 @@ export default function StudentResourcesPortal({
                 {/* Scroll to Top */}
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-600 dark:text-slate-300 hover:text-gold-500 dark:hover:text-gold-400 transition-all active:scale-90 group/top"
+                  className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-800 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-gold-400 transition-all active:scale-90 group/top"
                   title="Scroll to Top"
                 >
                   <ArrowUp className="w-4 h-4 group-hover/top:-translate-y-0.5 transition-transform" />
@@ -951,9 +951,9 @@ export default function StudentResourcesPortal({
           <div className="flex items-center gap-4">
             <a
               href="tel:+918463911854"
-              className="hover:text-gold-500 flex items-center gap-1 font-semibold"
+              className="hover:text-blue-600 dark:hover:text-gold-500 flex items-center gap-1 font-semibold"
             >
-              <Phone className="w-3.5 h-3.5 text-gold-500" />
+              <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
               <span>Academic Helpline: +91 84639 11854</span>
             </a>
           </div>

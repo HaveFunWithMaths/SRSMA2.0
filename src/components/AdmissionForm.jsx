@@ -39,14 +39,14 @@ export default function AdmissionForm() {
   };
 
   return (
-    <section id="admissions" className="py-6 md:py-8 bg-slate-50 dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section id="admissions" className="py-6 md:py-8 bg-slate-50 dark:bg-navy-950 border-b border-slate-200 dark:border-white/[0.08] relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column: Why Inquire Now */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:border-gold-500/35 dark:text-gold-200 dark:shadow-[0_0_15px_-4px_rgba(245,158,11,0.2)] text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Admissions 2027–2029</span>
             </div>
@@ -62,47 +62,47 @@ export default function AdmissionForm() {
             {/* Benefit Checkpoints */}
             <div className="space-y-3.5 pt-2">
               <div className="flex items-start gap-3">
-                <div className="p-1.5 rounded-lg bg-gold-500/20 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 dark:bg-gold-500/15 dark:text-gold-300 dark:border dark:border-gold-500/30 shrink-0 mt-0.5">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-900 dark:text-white">Free Conceptual Diagnostic Assessment</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Pinpoint exact strengths and syllabus gaps before enrolling.</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Pinpoint exact strengths and syllabus gaps before enrolling.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-1.5 rounded-lg bg-gold-500/20 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 dark:bg-gold-500/15 dark:text-gold-300 dark:border dark:border-gold-500/30 shrink-0 mt-0.5">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-900 dark:text-white">1-on-1 Parent Consultation with IITian Faculty</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Meet the actual teachers who will mentor your child daily.</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Meet the actual teachers who will mentor your child daily.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-1.5 rounded-lg bg-gold-500/20 text-gold-600 dark:text-gold-400 shrink-0 mt-0.5">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 dark:bg-gold-500/15 dark:text-gold-300 dark:border dark:border-gold-500/30 shrink-0 mt-0.5">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-900 dark:text-white">Up to 100% Merit Scholarship Available</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Recognizing deserving talent based on performance in our diagnostic screening.</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Recognizing deserving talent based on performance in our diagnostic screening.</p>
                 </div>
               </div>
             </div>
 
             {/* Direct Helpline Box */}
-            <div className="p-4 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+            <div className="p-4 rounded-2xl bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] shadow-sm flex items-center justify-between">
               <div>
                 <div className="text-xs text-slate-500 dark:text-slate-400">Prefer speaking directly right now?</div>
-                <a href="tel:+918463911854" className="text-base font-bold text-gold-600 dark:text-gold-400 hover:underline">
+                <a href="tel:+918463911854" className="text-base font-bold text-blue-700 dark:text-gold-300 hover:underline">
                   +91 84639 11854
                 </a>
               </div>
               <a
                 href="tel:+918463911854"
-                className="p-3 rounded-xl bg-gold-500 text-navy-950 font-bold shadow-md hover:bg-gold-400 transition-colors"
+                className="p-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 font-bold shadow-md dark:shadow-glow-champagne transition-all"
                 aria-label="Call Admissions Desk"
               >
                 <Phone className="w-5 h-5" />
@@ -114,9 +114,9 @@ export default function AdmissionForm() {
           {/* Right Column: Lead Capture Card */}
           <div className="lg:col-span-7">
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 to-blue-600/20 rounded-3xl blur-lg"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 to-blue-600/20 dark:from-gold-500/15 dark:to-amber-500/10 rounded-3xl blur-lg"></div>
               
-              <div className="relative bg-white dark:bg-navy-900 border border-slate-200 dark:border-gold-500/30 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl dark:shadow-2xl transition-colors duration-200">
+              <div className="relative bg-white dark:bg-navy-900/90 border border-slate-200 dark:border-white/[0.1] rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_25px_60px_rgba(0,0,0,0.85)] transition-colors duration-200">
                 
                 {submitted ? (
                   <div className="text-center py-10 space-y-4">
@@ -138,7 +138,7 @@ export default function AdmissionForm() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="border-b border-slate-200 dark:border-slate-800 pb-4 mb-4">
+                    <div className="border-b border-slate-200 dark:border-white/[0.08] pb-4 mb-4">
                       <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white">
                         Admissions & Diagnostic Inquiry Form
                       </h3>
@@ -158,7 +158,7 @@ export default function AdmissionForm() {
                           placeholder="e.g., Ramesh Varma"
                           value={formData.parentName}
                           onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs"
                         />
                       </div>
 
@@ -171,7 +171,7 @@ export default function AdmissionForm() {
                           placeholder="e.g., Pranav Varma"
                           value={formData.studentName}
                           onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs"
                         />
                       </div>
                     </div>
@@ -184,7 +184,7 @@ export default function AdmissionForm() {
                         <select
                           value={formData.currentClass}
                           onChange={(e) => setFormData({ ...formData, currentClass: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs"
                         >
                           <option value="8th" className="bg-white dark:bg-navy-900">Class 8th (Junior Foundation)</option>
                           <option value="9th" className="bg-white dark:bg-navy-900">Class 9th (Pre-JEE/NEET Foundation)</option>
@@ -202,7 +202,7 @@ export default function AdmissionForm() {
                         <select
                           value={formData.targetExam}
                           onChange={(e) => setFormData({ ...formData, targetExam: e.target.value })}
-                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs"
+                          className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs"
                         >
                           <option value="IIT-JEE (Main & Advanced)" className="bg-white dark:bg-navy-900">IIT-JEE (Main & Advanced)</option>
                           <option value="NEET (UG Medical)" className="bg-white dark:bg-navy-900">NEET (UG Medical)</option>
@@ -222,7 +222,7 @@ export default function AdmissionForm() {
                         placeholder="+91 84639 11854"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs"
                       />
                     </div>
 
@@ -235,13 +235,13 @@ export default function AdmissionForm() {
                         placeholder="e.g., Looking for hostel facilities, or need conceptual support in Physics..."
                         value={formData.query}
                         onChange={(e) => setFormData({ ...formData, query: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-slate-700/80 rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all shadow-xs resize-none"
+                        className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-navy-950/90 border border-slate-300 dark:border-white/[0.08] rounded-xl text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-400 dark:focus:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)] transition-all shadow-xs resize-none"
                       ></textarea>
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-gold-500 via-gold-600 to-gold-500 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-black text-sm tracking-wide shadow-lg shadow-gold-500/20 hover:shadow-gold-500/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
+                      className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:text-navy-950 font-black text-sm tracking-wide shadow-lg shadow-orange-500/25 dark:shadow-glow-champagne transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5"
                     >
                       <Send className="w-4 h-4" />
                       <span>Submit Inquiry & Connect Directly on WhatsApp</span>

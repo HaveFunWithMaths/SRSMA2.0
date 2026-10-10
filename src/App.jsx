@@ -7,7 +7,6 @@ import ProofMetrics from './components/ProofMetrics';
 import FacultySection from './components/FacultySection';
 import ProgramsSection from './components/ProgramsSection';
 import StudentResourcesPortal from './components/StudentResourcesPortal';
-import ScholarshipCalculator from './components/ScholarshipCalculator';
 import WhyChooseUs from './components/WhyChooseUs';
 import CampusHostelSection from './components/CampusHostelSection';
 import TestimonialsSection from './components/TestimonialsSection';
@@ -24,7 +23,6 @@ const SECTION_IDS = [
   'results',
   'faculty',
   'programs',
-  'scholarship-calculator',
   'why-us',
   'campus',
   'testimonials',
@@ -139,7 +137,7 @@ export default function App() {
   // If a student portal is active, render the dedicated React portal!
   if (portalViewClass) {
     return (
-      <div className="min-h-screen bg-white dark:bg-navy-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-gold-500 selection:text-navy-950 transition-colors duration-200">
+      <div className="min-h-screen bg-white dark:bg-navy-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white dark:selection:bg-gold-500 dark:selection:text-navy-950 transition-colors duration-200">
         <StudentResourcesPortal
           initialClass={portalViewClass}
           onBack={handleBackToAcademy}
@@ -158,7 +156,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-navy-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-gold-500 selection:text-navy-950 transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-navy-950 text-slate-900 dark:text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white dark:selection:bg-gold-500 dark:selection:text-navy-950 transition-colors duration-200">
 
       {/* 1. Announcement Bar */}
       <AnnouncementBar onOpenDiagnostic={() => setIsDiagnosticOpen(true)} />
@@ -195,17 +193,12 @@ export default function App() {
         {/* 6. Star Faculty Section */}
         <FacultySection />
 
-        {/* 7. Academic Programs */}
+        {/* 7. Academic Programs & Integrated Cohort Matcher */}
         <ProgramsSection
           onOpenDiagnostic={() => setIsDiagnosticOpen(true)}
         />
 
-        {/* 8. Interactive Program & Scholarship Finder */}
-        <ScholarshipCalculator
-          onOpenDiagnostic={() => setIsDiagnosticOpen(true)}
-        />
-
-        {/* 9. Why Parents Trust SRSMA + 5-Step Flywheel */}
+        {/* 8. Why Parents Trust SRSMA + 5-Step Flywheel */}
         <WhyChooseUs
           onOpenDiagnostic={() => setIsDiagnosticOpen(true)}
         />

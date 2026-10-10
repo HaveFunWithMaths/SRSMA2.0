@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Menu, X, Phone, MessageSquare, Award, Users, BookOpen,
   CheckCircle, Building2, Star, Send, MapPin, ChevronRight, Sparkles,
-  Sun, Moon, HelpCircle, Calculator, ExternalLink, Trophy
+  Sun, Moon, HelpCircle, ExternalLink, Trophy
 } from 'lucide-react';
 
 export const NAV_SECTIONS = [
@@ -11,7 +11,6 @@ export const NAV_SECTIONS = [
   { id: 'results', label: 'Results & Proof', icon: Award, badge: '99.48 %ile' },
   { id: 'faculty', label: 'IIT Faculty', icon: Users },
   { id: 'programs', label: 'Programs', icon: BookOpen },
-  { id: 'scholarship-calculator', label: 'Scholarship Finder', icon: Calculator },
   { id: 'why-us', label: 'Why SRSMA', icon: CheckCircle },
   { id: 'campus', label: 'Campus & Hostel', icon: Building2 },
   { id: 'testimonials', label: 'Reviews', icon: Star, badge: '4.9 ★' },
@@ -51,8 +50,8 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
   return (
     <>
       <header className={`sticky top-0 z-40 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 dark:bg-navy-900/95 backdrop-blur-md shadow-md dark:shadow-xl border-b border-slate-200 dark:border-slate-800/80'
-        : 'bg-white dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800'
+        ? 'bg-white/95 dark:bg-navy-950/90 backdrop-blur-md shadow-md dark:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)] border-b border-slate-200 dark:border-white/[0.08]'
+        : 'bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-white/[0.06]'
         }`}>
         {/* Main Brand & Action Header */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-4">
@@ -81,14 +80,14 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="hidden md:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-gold-500/15 text-gold-700 dark:text-gold-300 border border-gold-500/30 hover:bg-gold-500/25 transition-colors cursor-pointer"
+                  className="hidden md:inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 dark:bg-gold-500/15 dark:text-gold-300 dark:border-gold-500/30 transition-colors cursor-pointer"
                   title="View SRSMA on Google"
                 >
-                  <Star className="w-2.5 h-2.5 fill-gold-500 text-gold-500" />
+                  <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-500" />
                   4.9 Google
                 </a>
               </div>
-              <p className="text-[10px] sm:text-xs text-gold-600 dark:text-gold-400 font-semibold uppercase tracking-wider flex items-center gap-1">
+              <p className="text-[10px] sm:text-xs text-blue-700 dark:text-gold-400 font-semibold uppercase tracking-wider flex items-center gap-1">
                 <span>IIT-JEE</span> • <span>NEET</span> • <span>Foundations</span>
                 <span className="text-slate-500 dark:text-slate-400 hidden sm:inline">• Sun City, Hyderabad</span>
               </p>
@@ -100,7 +99,7 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
             {/* Theme Toggle Button */}
             <button
               onClick={onToggleTheme}
-              className="p-2 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-100 dark:bg-navy-800 text-slate-700 dark:text-gold-400 hover:bg-slate-200 dark:hover:bg-navy-750 transition-colors shadow-sm"
+              className="p-2 rounded-xl border border-slate-200 dark:border-white/[0.1] bg-slate-100 dark:bg-navy-900 text-slate-700 dark:text-gold-400 hover:bg-slate-200 dark:hover:bg-navy-800 transition-colors shadow-sm"
               aria-label="Toggle light/dark theme"
               title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             >
@@ -113,9 +112,9 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
 
             <a
               href="tel:+918463911854"
-              className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-navy-800/80 border border-slate-200 dark:border-slate-700/60 text-xs font-semibold transition-all"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-navy-800/80 border border-slate-200 dark:border-white/[0.08] text-xs font-semibold transition-all"
             >
-              <Phone className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+              <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
               <span>+91 84639 11854</span>
             </a>
 
@@ -124,16 +123,16 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
               href={challengeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gold-500/15 hover:bg-gold-500/25 border border-gold-500/40 text-gold-700 dark:text-gold-300 font-bold text-xs transition-colors"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100/80 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:hover:bg-gold-500/25 dark:border-gold-500/40 dark:text-gold-300 font-bold text-xs transition-colors"
             >
-              <Trophy className="w-3.5 h-3.5 text-gold-500" />
+              <Trophy className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
               <span>Free Board Readiness Challenge</span>
               <ExternalLink className="w-3 h-3" />
             </a>
 
             <button
               onClick={onOpenDiagnostic}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold text-xs tracking-wide shadow-md shadow-gold-500/20 hover:shadow-gold-500/30 transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-bold text-xs tracking-wide shadow-md shadow-orange-500/25 hover:shadow-orange-500/35 transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
             >
               Book Consultation
             </button>
@@ -179,7 +178,7 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
         </div>
 
         {/* Laptop / Desktop Secondary Sticky Tab Bar */}
-        <div className="hidden lg:block border-t border-slate-200 dark:border-slate-800/80 bg-slate-50/90 dark:bg-navy-950/70 transition-colors duration-200">
+        <div className="hidden lg:block border-t border-slate-200 dark:border-white/[0.06] bg-slate-50/90 dark:bg-navy-950/80 backdrop-blur-md transition-colors duration-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <nav className="flex items-center space-x-1 overflow-x-auto py-1 scrollbar-none" aria-label="Page Sections">
               {NAV_SECTIONS.map((tab) => {
@@ -190,24 +189,24 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                     key={tab.id}
                     onClick={() => scrollToSection(tab.id)}
                     className={`group relative flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg transition-all whitespace-nowrap ${isActive
-                      ? 'bg-gold-500/15 text-gold-700 dark:text-gold-300 font-bold border border-gold-500/30'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60'
+                      ? 'bg-blue-50 text-blue-700 dark:bg-gold-500/15 dark:text-gold-200 font-bold border border-blue-200 dark:border-gold-500/40 dark:shadow-[0_0_15px_-3px_rgba(245,158,11,0.25)]'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-navy-800/60'
                       }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 transition-colors ${isActive ? 'text-gold-600 dark:text-gold-400' : 'text-slate-400 group-hover:text-gold-500'
+                    <Icon className={`w-3.5 h-3.5 transition-colors ${isActive ? 'text-blue-600 dark:text-gold-400' : 'text-slate-400 group-hover:text-blue-600 dark:group-hover:text-gold-500'
                       }`} />
                     <span>{tab.label}</span>
                     {tab.badge && (
                       <span className={`text-[9px] px-1.5 py-0.2 rounded-full font-bold uppercase tracking-wider ${isActive
-                        ? 'bg-gold-500 text-navy-950'
-                        : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700'
+                        ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-400 dark:to-gold-500 dark:text-navy-950'
+                        : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-white/[0.08]'
                         }`}>
                         {tab.badge}
                       </span>
                     )}
 
                     {isActive && (
-                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full"></span>
+                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 rounded-full shadow-[0_0_8px_rgba(245,158,11,0.6)]"></span>
                     )}
                   </button>
                 );
@@ -233,11 +232,11 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                 <img
                   src="/assets/images/logowhite.jpeg"
                   alt="SRSMA"
-                  className="w-8 h-8 rounded-lg border border-gold-500/40"
+                  className="w-8 h-8 rounded-lg border border-blue-500/30 dark:border-gold-500/40"
                 />
                 <div>
                   <h3 className="font-display font-bold text-sm text-slate-900 dark:text-white leading-tight">SRSMA Menu</h3>
-                  <p className="text-[10px] text-gold-600 dark:text-gold-400">Sun City, Hyderabad</p>
+                  <p className="text-[10px] text-blue-700 dark:text-gold-400">Sun City, Hyderabad</p>
                 </div>
               </div>
               <button
@@ -254,10 +253,10 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                 href={challengeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 px-3 rounded-xl bg-gold-500/15 border border-gold-500/40 text-gold-700 dark:text-gold-300 text-xs font-bold flex items-center justify-between shadow-xs"
+                className="w-full py-2.5 px-3 rounded-xl bg-blue-50 border border-blue-200 text-blue-800 dark:bg-gold-500/15 dark:border-gold-500/40 dark:text-gold-300 text-xs font-bold flex items-center justify-between shadow-xs"
               >
                 <div className="flex items-center gap-2">
-                  <Trophy className="w-4 h-4 text-gold-500" />
+                  <Trophy className="w-4 h-4 text-blue-600 dark:text-gold-500" />
                   <span>Free Board Readiness Challenge Test</span>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -277,16 +276,16 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                     key={tab.id}
                     onClick={() => scrollToSection(tab.id)}
                     className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-left ${isActive
-                      ? 'bg-gold-500/15 text-gold-700 dark:text-gold-300 font-bold border border-gold-500/30'
+                      ? 'bg-blue-50 text-blue-700 dark:bg-gold-500/15 dark:text-gold-300 font-bold border border-blue-200 dark:border-gold-500/30'
                       : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-navy-800'
                       }`}
                   >
                     <div className="flex items-center gap-2.5">
-                      <Icon className={`w-4 h-4 ${isActive ? 'text-gold-600 dark:text-gold-400' : 'text-slate-400'}`} />
+                      <Icon className={`w-4 h-4 ${isActive ? 'text-blue-600 dark:text-gold-400' : 'text-slate-400'}`} />
                       <span>{tab.label}</span>
                     </div>
                     {tab.badge ? (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-gold-500/20 text-gold-700 dark:text-gold-400 border border-gold-500/30 font-bold">
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200 dark:bg-gold-500/20 dark:text-gold-400 dark:border-gold-500/30 font-bold">
                         {tab.badge}
                       </span>
                     ) : (
@@ -304,7 +303,7 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                   setIsMobileMenuOpen(false);
                   onOpenDiagnostic();
                 }}
-                className="w-full py-3 px-4 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold text-xs tracking-wide shadow-md transition-all text-center flex items-center justify-center gap-2"
+                className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-bold text-xs tracking-wide shadow-md transition-all text-center flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Book 1-on-1 Parent Consultation</span>
@@ -315,7 +314,7 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                   href="tel:+918463911854"
                   className="py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-navy-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5"
                 >
-                  <Phone className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                  <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
                   <span>Call Us</span>
                 </a>
                 <a

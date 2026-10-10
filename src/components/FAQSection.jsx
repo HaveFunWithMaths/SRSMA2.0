@@ -85,7 +85,7 @@ export default function FAQSection({ onOpenDiagnostic }) {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/10 dark:border-gold-500/30 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Parent & Student Clarifications</span>
           </div>
@@ -109,8 +109,8 @@ export default function FAQSection({ onOpenDiagnostic }) {
                   setOpenIndex(0); // reset open to first item in new category
                 }}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${isActive
-                  ? 'bg-gold-500 text-navy-950 shadow-md shadow-gold-500/20'
-                  : 'bg-slate-100 dark:bg-navy-900 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20 dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne'
+                  : 'bg-slate-100 dark:bg-navy-900/80 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-white/[0.08]'
                   }`}
               >
                 {cat.label}
@@ -127,22 +127,22 @@ export default function FAQSection({ onOpenDiagnostic }) {
               <div
                 key={idx}
                 className={`rounded-2xl border transition-all duration-200 shadow-xs overflow-hidden ${isOpen
-                    ? 'border-gold-500/40 bg-white dark:bg-navy-900 shadow-sm'
-                    : 'border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-navy-900/60 hover:border-slate-300 dark:hover:border-slate-700'
+                    ? 'border-blue-500/40 dark:border-gold-500/40 bg-white dark:bg-navy-900/90 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)]'
+                    : 'border-slate-200 dark:border-white/[0.08] bg-slate-50/80 dark:bg-navy-900/60 hover:border-slate-300 dark:hover:border-gold-500/30'
                   }`}
               >
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors hover:bg-slate-50 dark:hover:bg-navy-850/60"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors hover:bg-slate-50 dark:hover:bg-white/[0.02]"
                   aria-expanded={isOpen}
                 >
                   <span className="font-display font-bold text-slate-900 dark:text-white text-sm sm:text-base pr-2">
                     {faq.question}
                   </span>
-                  <div className={`p-1.5 rounded-full shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-gold-500 text-navy-950' : 'bg-slate-200 dark:bg-slate-800 text-slate-500'
+                  <div className={`p-1.5 rounded-full shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne' : 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
                     }`}>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </div>
                 </button>
 
                 <AnimatePresence initial={false}>
@@ -153,7 +153,7 @@ export default function FAQSection({ onOpenDiagnostic }) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                     >
-                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200/80 dark:border-slate-800/80 pt-4">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200/80 dark:border-white/[0.08] pt-4">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -165,7 +165,7 @@ export default function FAQSection({ onOpenDiagnostic }) {
         </div>
 
         {/* Still have questions banner */}
-        <div className="mt-12 p-6 rounded-2xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+        <div className="mt-12 p-6 rounded-2xl bg-white dark:bg-navy-900/90 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_15px_30px_-10px_rgba(0,0,0,0.6)] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
           <div>
             <h4 className="font-display font-bold text-slate-900 dark:text-white text-base">
               Have a specific question about your child's learning profile?
@@ -186,7 +186,7 @@ export default function FAQSection({ onOpenDiagnostic }) {
             </a>
             <button
               onClick={onOpenDiagnostic}
-              className="px-4 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm whitespace-nowrap"
+              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-md shadow-orange-500/25 dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne font-bold text-xs flex items-center gap-1.5 transition-all whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Book Consultation</span>

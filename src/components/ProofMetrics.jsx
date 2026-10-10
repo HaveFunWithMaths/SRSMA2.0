@@ -68,6 +68,8 @@ const KPI_CARDS = [
 
 const TICKER_ITEMS = [
   '🏆 99.48 %ile Top JEE Main Score',
+  '🔥 Early Bird Discount for Students Registering Before Oct 31st',
+  '🎓 Merit-Based Scholarships Up to 100% via Board Readiness Challenge',
   '⚡ 10 / 16 Qualified in 1st JEE Main Batch (62.5%)',
   '👨‍🏫 100% Core Faculty from IIT Kharagpur, IIT Madras & NIT Warangal',
   '🎯 Free Board Readiness Challenge Diagnostic Test at exams.srsma.in/boardChallenge',
@@ -137,10 +139,10 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
   }, [activeCategory]);
 
   return (
-    <section ref={sectionRef} id="results" className="py-6 md:py-8 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section ref={sectionRef} id="results" className="py-6 md:py-8 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-white/[0.08] relative transition-colors duration-200">
 
       {/* Live Social Proof Ticker Banner */}
-      <div className="bg-slate-900 dark:bg-navy-950 text-slate-200 py-3 border-y border-slate-800 dark:border-slate-850 overflow-hidden mb-5 shadow-xs">
+      <div className="bg-slate-900 dark:bg-navy-950 text-slate-200 py-3 border-y border-slate-800 dark:border-white/[0.06] overflow-hidden mb-5 shadow-xs">
         <div className="flex w-max animate-marquee space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
             <span key={i} className="flex items-center gap-2">
@@ -155,8 +157,8 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
 
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8 space-y-2.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-700 dark:text-gold-400 text-xs font-bold uppercase tracking-wider shadow-xs">
-            <Trophy className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/10 dark:border-gold-500/30 dark:text-gold-400 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <Trophy className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
             <span>Documented Academic Proof</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -172,7 +174,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
           {KPI_CARDS.map((card, idx) => (
             <div
               key={idx}
-              className={`p-5 rounded-2xl bg-white dark:bg-navy-900/90 border ${card.borderColor} card-elevation-subtle card-lift-hover flex flex-col justify-between`}
+              className={`p-5 rounded-2xl bg-white dark:bg-navy-950/80 border ${card.borderColor} dark:border-white/[0.08] dark:hover:border-gold-500/40 card-elevation-subtle dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] card-lift-hover flex flex-col justify-between`}
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
@@ -190,7 +192,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
                   {card.label}
                 </div>
               </div>
-              <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-3 pt-3 border-t border-slate-200 dark:border-slate-800 leading-relaxed font-normal">
+              <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-3 pt-3 border-t border-slate-200 dark:border-white/[0.06] leading-relaxed font-normal">
                 {card.subtext}
               </p>
             </div>
@@ -198,7 +200,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
         </div>
 
         {/* Real Scorecard & Results Banners Showcase */}
-        <div className="bg-slate-50 dark:bg-navy-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl p-5 sm:p-7 card-elevation-subtle transition-colors duration-200">
+        <div className="bg-slate-50 dark:bg-navy-950/80 border border-slate-200/90 dark:border-white/[0.08] rounded-3xl p-5 sm:p-7 card-elevation-subtle dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_20px_40px_-15px_rgba(0,0,0,0.7)] transition-colors duration-200">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
             <div>
               <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white flex items-center gap-2">
@@ -209,7 +211,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
             </div>
 
             {/* Category Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 shadow-2xs">
+            <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] shadow-2xs">
               {[
                 { id: 'all', label: 'All Scorecards' },
                 { id: 'jee-main', label: 'JEE Main' },
@@ -221,7 +223,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
                   onClick={() => setActiveCategory(tab.id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                     activeCategory === tab.id
-                      ? 'bg-gold-500 text-navy-950 shadow-xs'
+                      ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-400 dark:to-gold-500 dark:text-navy-950 shadow-xs dark:shadow-glow-champagne'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
@@ -241,7 +243,7 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
                   title: item.title,
                   caption: `${item.subtitle} • Shri Ram Smart Minds Academy Official Record`
                 })}
-                className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 hover:border-gold-500/50 transition-all duration-300 card-elevation-subtle hover:-translate-y-1 flex flex-col"
+                className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-navy-950/90 border border-slate-200 dark:border-white/[0.08] hover:border-blue-500/50 dark:hover:border-gold-500/50 dark:hover:shadow-[0_0_25px_-5px_rgba(245,158,11,0.2)] transition-all duration-300 card-elevation-subtle hover:-translate-y-1 flex flex-col"
               >
                 {/* Image Frame */}
                 <div className="relative aspect-[16/10] bg-slate-100 dark:bg-navy-950 overflow-hidden flex items-center justify-center p-2">
@@ -256,27 +258,27 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
                     }}
                   />
                   <div className="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                    <span className="p-3 rounded-full bg-gold-500 text-navy-950 font-bold shadow-lg flex items-center gap-1.5 text-xs">
+                    <span className="p-3 rounded-full bg-blue-600 text-white dark:bg-gold-500 dark:text-navy-950 font-bold shadow-lg flex items-center gap-1.5 text-xs">
                       <ZoomIn className="w-4 h-4" />
                       <span>View Full Scorecard</span>
                     </span>
                   </div>
-                  <span className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-0.5 rounded-md bg-white/95 dark:bg-navy-950/90 text-gold-700 dark:text-gold-300 border border-gold-500/30 shadow-xs">
+                  <span className="absolute top-3 left-3 text-[10px] font-bold px-2.5 py-0.5 rounded-md bg-white/95 dark:bg-navy-950/90 text-blue-800 dark:text-gold-300 border border-blue-200 dark:border-gold-500/30 shadow-xs">
                     {item.badge}
                   </span>
                 </div>
 
                 {/* Card Info */}
-                <div className="p-5 border-t border-slate-200 dark:border-slate-800 flex-1 flex flex-col justify-between">
+                <div className="p-5 border-t border-slate-200 dark:border-white/[0.08] flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="font-display font-bold text-slate-900 dark:text-white text-base sm:text-lg group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                    <h4 className="font-display font-bold text-slate-900 dark:text-white text-base sm:text-lg group-hover:text-blue-600 dark:group-hover:text-gold-400 transition-colors">
                       {item.title}
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                       {item.subtitle}
                     </p>
                   </div>
-                  <div className="text-xs text-gold-600 dark:text-gold-400 font-semibold mt-4 flex items-center gap-1.5">
+                  <div className="text-xs text-blue-700 dark:text-gold-400 font-semibold mt-4 flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-trust-500" />
                     <span>Verified Official Record</span>
                   </div>

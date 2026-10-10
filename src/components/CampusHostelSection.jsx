@@ -112,7 +112,7 @@ export default function CampusHostelSection({ onOpenLightbox }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/10 dark:border-gold-500/30 dark:text-gold-400 text-xs font-semibold uppercase tracking-wider">
             <Building2 className="w-3.5 h-3.5" />
             <span>Campus, Hostels & Student Life</span>
           </div>
@@ -139,14 +139,14 @@ export default function CampusHostelSection({ onOpenLightbox }) {
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 ${
                   isActive
-                    ? 'text-navy-950 shadow-md shadow-gold-500/20'
-                    : 'bg-white dark:bg-navy-900 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800'
+                    ? 'text-white dark:text-navy-950 shadow-md shadow-blue-500/20 dark:shadow-glow-champagne'
+                    : 'bg-white dark:bg-navy-900/80 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-white/[0.08]'
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="campusActiveTab"
-                    className="absolute inset-0 bg-gold-500 rounded-xl"
+                    className="absolute inset-0 bg-blue-600 dark:bg-gradient-to-r dark:from-gold-300 dark:via-gold-400 dark:to-gold-500 rounded-xl"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -167,7 +167,7 @@ export default function CampusHostelSection({ onOpenLightbox }) {
                 title: item.title,
                 caption: `${item.title} — ${item.description}`
               })}
-              className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1 shadow-sm dark:shadow-lg flex flex-col"
+              className="group cursor-pointer rounded-2xl overflow-hidden bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] hover:border-blue-500/40 dark:hover:border-gold-500/40 transition-all duration-300 hover:-translate-y-1 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_0_25px_-5px_rgba(245,158,11,0.2)] flex flex-col"
             >
               {/* Image Frame */}
               <div className="relative aspect-[16/10] bg-slate-100 dark:bg-navy-950 overflow-hidden">
@@ -182,7 +182,7 @@ export default function CampusHostelSection({ onOpenLightbox }) {
                   }}
                 />
                 <div className="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="p-2 rounded-full bg-gold-500 text-navy-950 font-bold shadow-lg flex items-center gap-1 text-xs">
+                  <span className="p-2 rounded-full bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 font-bold shadow-lg dark:shadow-glow-champagne flex items-center gap-1 text-xs">
                     <ZoomIn className="w-4 h-4" />
                     <span>Click to Enlarge</span>
                   </span>
@@ -192,14 +192,14 @@ export default function CampusHostelSection({ onOpenLightbox }) {
               {/* Text Info */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-display font-bold text-slate-900 dark:text-white text-base group-hover:text-gold-600 dark:group-hover:text-gold-300 transition-colors">
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white text-base group-hover:text-blue-600 dark:group-hover:text-gold-300 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] text-gold-600 dark:text-gold-400 font-semibold">
+                <div className="mt-4 pt-3 border-t border-slate-200 dark:border-white/[0.08] flex items-center gap-1.5 text-[11px] text-blue-700 dark:text-gold-300 font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-trust-500" />
                   <span>Verified Campus Facility</span>
                 </div>
@@ -209,9 +209,9 @@ export default function CampusHostelSection({ onOpenLightbox }) {
         </div>
 
         {/* Video Highlight Box */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8 transition-colors duration-200">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white dark:bg-navy-900/80 border border-slate-200 dark:border-white/[0.08] shadow-md dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_20px_40px_-15px_rgba(0,0,0,0.7)] flex flex-col lg:flex-row items-center justify-between gap-8 transition-colors duration-200">
           <div className="space-y-3 max-w-xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-gold-700 dark:text-gold-400 bg-gold-500/10 px-2.5 py-1 rounded border border-gold-500/20 flex items-center gap-1.5 w-max">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-gold-200 bg-blue-50 dark:bg-gold-500/15 px-2.5 py-1 rounded border border-blue-200 dark:border-gold-500/35 dark:shadow-[0_0_12px_-3px_rgba(245,158,11,0.2)] flex items-center gap-1.5 w-max">
               <Video className="w-3.5 h-3.5" />
               <span>Campus Experience Video</span>
             </span>
@@ -222,7 +222,7 @@ export default function CampusHostelSection({ onOpenLightbox }) {
               Witness our interactive small-batch classrooms, cultural celebrations, and personal mentorship sessions directly in action.
             </p>
           </div>
-          <div className="w-full lg:w-96 aspect-video rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md dark:shadow-xl bg-slate-900 ring-1 ring-gold-500/20">
+          <div className="w-full lg:w-96 aspect-video rounded-2xl overflow-hidden border border-slate-200 dark:border-white/[0.1] shadow-md dark:shadow-2xl bg-slate-900 ring-1 ring-gold-500/30">
             <iframe
               src="https://www.youtube.com/embed/3v4OpPtcvPw?si=OCjC9Js54vRAJ8te"
               title="SRSMA Student Life & Culture"

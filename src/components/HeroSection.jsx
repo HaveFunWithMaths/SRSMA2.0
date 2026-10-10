@@ -31,16 +31,16 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
 
             {/* Top Admissions & Badge Strip */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-800 dark:text-gold-300 text-xs font-semibold shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 dark:bg-gold-500/15 dark:border-gold-500/40 dark:text-gold-300 text-xs font-semibold shadow-xs">
                 <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 dark:bg-gold-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-gold-500"></span>
                 </span>
                 <span>Admissions 2027–2029 Open</span>
               </div>
 
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium shadow-xs">
-                <MapPin className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                <MapPin className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
                 <span>Sun City, Hyderabad</span>
               </div>
             </div>
@@ -59,27 +59,27 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
 
             {/* Subtext */}
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-gold-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and weekly WhatsApp analytics.
+              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-blue-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and weekly WhatsApp analytics.
             </p>
 
             {/* CTA Buttons Strip */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
               <button
                 onClick={onOpenDiagnostic}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold-500 via-gold-600 to-gold-500 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-black text-sm tracking-wide shadow-lg shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5 whitespace-nowrap"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-black text-sm tracking-wide shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5 whitespace-nowrap"
               >
                 <span>Book 1-on-1 Consultation</span>
-                <ArrowRight className="w-4 h-4 text-navy-950 group-hover:translate-x-0.5 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
               </button>
 
               <a
                 href={challengeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-gold-500/60 bg-white dark:bg-navy-900/90 hover:bg-slate-50 dark:hover:bg-navy-800 text-slate-800 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-blue-500/60 dark:hover:border-gold-500/60 bg-white dark:bg-navy-900/90 hover:bg-slate-50 dark:hover:bg-navy-800 text-slate-800 dark:text-slate-200 hover:text-blue-700 dark:hover:text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 <span>Board Challenge Test</span>
-                <ExternalLink className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                <ExternalLink className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
               </a>
 
               <button
@@ -87,7 +87,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                 className="w-full sm:w-auto px-4 py-3.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
               >
                 <span>Meet Faculty</span>
-                <Users className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                <Users className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
               </button>
             </div>
 
@@ -99,7 +99,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-gold-600 dark:text-gold-400" />
+                <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-gold-400" />
                 <span>Direct IIT Doubt Solving</span>
               </span>
             </div>
@@ -111,19 +111,19 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
             <div className="relative mx-auto max-w-md lg:max-w-none">
 
               {/* Subtle Glowing ambient card background */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-gold-500/20 to-blue-600/20 rounded-3xl blur-xl opacity-70"></div>
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 dark:from-gold-500/25 dark:to-amber-500/15 rounded-3xl blur-2xl opacity-75"></div>
 
-              <div className="relative bg-white dark:bg-navy-900 border border-slate-200/90 dark:border-slate-700/80 rounded-2xl p-5 sm:p-6 card-elevation-subtle space-y-4 transition-colors duration-200">
+              <div className="relative bg-white dark:bg-navy-900/90 border border-slate-200/90 dark:border-white/[0.1] rounded-2xl p-5 sm:p-6 card-elevation-subtle dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_20px_40px_-15px_rgba(0,0,0,0.7)] space-y-4 transition-colors duration-200">
 
                 {/* Card Top Label */}
-                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/[0.08]">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-trust-500 animate-pulse"></span>
                     <span className="text-xs font-bold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
                       Documented Academic Proof
                     </span>
                   </div>
-                  <span className="text-[11px] font-semibold text-gold-700 dark:text-gold-400 bg-gold-500/10 px-2 py-0.5 rounded-md border border-gold-500/30">
+                  <span className="text-[11px] font-semibold text-blue-700 dark:text-gold-300 bg-blue-50 dark:bg-gold-500/15 px-2 py-0.5 rounded-md border border-blue-200 dark:border-gold-500/40">
                     Sun City Center
                   </span>
                 </div>
@@ -135,23 +135,23 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                     title: 'JEE Main Results Highlight',
                     caption: 'Authentic SRSMA Classroom Batch Performance — 99.48 %ile Top Percentile'
                   })}
-                  className="group cursor-pointer relative rounded-xl overflow-hidden border border-amber-500/30 dark:border-gold-500/40 bg-slate-50 dark:bg-navy-950 p-4 transition-all hover:border-amber-500 card-lift-hover shadow-2xs"
+                  className="group cursor-pointer relative rounded-xl overflow-hidden border border-blue-200 dark:border-gold-500/40 bg-slate-50 dark:bg-navy-950/80 p-4 transition-all hover:border-blue-400 dark:hover:border-gold-400 dark:hover:shadow-[0_0_25px_-5px_rgba(245,158,11,0.25)] card-lift-hover shadow-2xs"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-[11px] font-semibold uppercase tracking-wider text-gold-700 dark:text-gold-400 flex items-center gap-1">
+                      <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-700 dark:text-gold-400 flex items-center gap-1">
                         <Award className="w-3.5 h-3.5" />
                         <span>Top JEE Main Score</span>
                       </div>
-                      <div className="text-3xl sm:text-4xl font-display font-black text-slate-900 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-300 transition-colors">
-                        99.48 <span className="text-lg font-bold text-gold-600 dark:text-gold-400">%ile</span>
+                      <div className="text-3xl sm:text-4xl font-display font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-gold-200 transition-colors">
+                        99.48 <span className="text-lg font-bold text-orange-600 dark:text-gold-400">%ile</span>
                       </div>
-                      <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                      <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
                         Exceptional conceptual mastery across Physics, Chemistry & Math.
                       </p>
                     </div>
                     <div className="text-right">
-                      <span className="inline-block p-2.5 rounded-xl bg-gold-500/15 dark:bg-gold-500/20 text-gold-600 dark:text-gold-400 group-hover:scale-110 transition-transform shadow-xs">
+                      <span className="inline-block p-2.5 rounded-xl bg-blue-50 dark:bg-gold-500/20 text-blue-600 dark:text-gold-300 group-hover:scale-110 transition-transform shadow-xs">
                         <Award className="w-6 h-6" />
                       </span>
                       <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-medium">Click to zoom</div>
@@ -161,15 +161,15 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
 
                 {/* Proof Metrics Mini-Grid */}
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/70 border border-slate-200 dark:border-slate-800 shadow-xs">
+                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] shadow-xs">
                     <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">1st Batch JEE Main</div>
                     <div className="text-xl font-bold text-trust-600 dark:text-trust-400 mt-0.5">10 / 16 (62.5%)</div>
                     <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Premier qualifying ratio</div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/70 border border-slate-200 dark:border-slate-800 shadow-xs">
+                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] shadow-xs">
                     <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Board & IPE Toppers</div>
-                    <div className="text-xl font-bold text-blue-600 dark:text-blue-400 mt-0.5">Up to 98%</div>
+                    <div className="text-xl font-bold text-blue-600 dark:text-sky-400 mt-0.5">Up to 98%</div>
                     <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">State Board & CBSE</div>
                   </div>
                 </div>
@@ -178,9 +178,9 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                 <div className="pt-1">
                   <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center justify-between">
                     <span>Guided Personally By Core Alumni</span>
-                    <span className="text-[11px] text-gold-700 dark:text-gold-400 font-bold">Zero Junior Tutors</span>
+                    <span className="text-[11px] text-blue-700 dark:text-gold-300 font-bold">Zero Junior Tutors</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-navy-950/90 border border-slate-200 dark:border-slate-800 text-xs shadow-xs">
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-navy-950/90 border border-slate-200 dark:border-white/[0.08] text-xs shadow-xs">
                     <div className="flex items-center gap-2">
                       <div className="flex -space-x-2 overflow-hidden">
                         <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Amal M Das.png" alt="Mr. Amal M Das" />

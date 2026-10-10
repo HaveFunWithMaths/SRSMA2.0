@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Sparkles, ExternalLink, Award, CheckCircle2,
   Brain, Target, Clock, ArrowRight, ShieldCheck,
-  BarChart3, HelpCircle, Trophy, BookOpen
+  BarChart3, HelpCircle, Trophy, BookOpen, Download
 } from 'lucide-react';
 
 const HIGHLIGHT_CARDS = [
@@ -81,16 +81,16 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Main Banner Container */}
-        <div className="relative rounded-3xl bg-white dark:bg-gradient-to-br dark:from-navy-900 dark:via-navy-850 dark:to-navy-950 border-2 border-gold-500/40 p-5 sm:p-8 md:p-8 shadow-2xl overflow-hidden">
+        <div className="relative rounded-3xl bg-white dark:bg-gradient-to-br dark:from-navy-900/90 dark:via-navy-850/90 dark:to-navy-950/95 border-2 border-blue-500/30 dark:border-gold-500/35 p-5 sm:p-8 md:p-8 shadow-2xl dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_25px_50px_-12px_rgba(0,0,0,0.8)] overflow-hidden">
 
           {/* Top Decorative Flare */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
-          <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 dark:bg-gold-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-6 space-y-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-700 dark:text-gold-300 text-xs font-bold uppercase tracking-wider animate-pulse-subtle">
-              <Sparkles className="w-4 h-4 text-gold-500" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:border-gold-500/40 dark:text-gold-300 text-xs font-bold uppercase tracking-wider animate-pulse-subtle">
+              <Sparkles className="w-4 h-4 text-blue-600 dark:text-gold-400" />
               <span>Free Diagnostic Assessment • All Telangana & Hyderabad Students</span>
             </div>
 
@@ -110,7 +110,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
               return (
                 <div
                   key={idx}
-                  className={`p-5 rounded-2xl bg-white dark:bg-navy-950/80 border ${card.borderColor} shadow-sm hover:shadow-md dark:shadow-md dark:hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between`}
+                  className={`p-5 rounded-2xl bg-white dark:bg-navy-950/80 border ${card.borderColor} dark:border-white/[0.08] dark:hover:border-gold-500/40 shadow-sm hover:shadow-md dark:shadow-md dark:hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between`}
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
@@ -126,7 +126,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
                       {card.description}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1 text-[11px] font-semibold text-gold-600 dark:text-gold-400">
+                  <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1 text-[11px] font-semibold text-blue-700 dark:text-gold-400">
                     <CheckCircle2 className="w-3.5 h-3.5 text-trust-500" />
                     <span>100% Complimentary</span>
                   </div>
@@ -136,14 +136,14 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
           </div>
 
           {/* How It Works 4-Step Process */}
-          <div className="bg-slate-50/90 dark:bg-navy-950/60 rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 mb-6">
+          <div className="bg-slate-50/90 dark:bg-navy-950/70 rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-white/[0.08] mb-6">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center mb-5">
               How the Diagnostic Test Works
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {STEPS.map((step, idx) => (
                 <div key={idx} className="relative flex flex-col items-center text-center">
-                  <div className="w-10 h-10 rounded-full bg-gold-500 text-navy-950 font-black text-sm flex items-center justify-center mb-3 shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 dark:bg-gradient-to-br dark:from-gold-300 dark:to-gold-500 text-white dark:text-navy-950 font-black text-sm flex items-center justify-center mb-3 shadow-md dark:shadow-glow-champagne">
                     {step.step}
                   </div>
                   <h4 className="font-display font-bold text-slate-900 dark:text-white text-sm">
@@ -158,7 +158,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
           </div>
 
           {/* Primary High-Converting CTA Box */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-5 rounded-2xl bg-gradient-to-r from-gold-500/15 via-gold-500/20 to-blue-500/15 border border-gold-500/40">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-5 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 dark:from-gold-500/15 dark:via-amber-500/10 dark:to-navy-900 border border-blue-200 dark:border-gold-500/35 dark:shadow-[inset_0_1px_0_0_rgba(254,243,199,0.1)]">
             <div className="space-y-1 text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <span className="flex h-2.5 w-2.5 relative">
@@ -173,7 +173,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
                 Take the Free Board Readiness Challenge Online Now
               </h3>
               <p className="text-xs text-slate-600 dark:text-slate-300">
-                Direct access on <strong className="text-gold-700 dark:text-gold-300">exams.srsma.in/boardChallenge</strong>. Open for Classes 8, 9, 10, 11, 12 & Repeaters.
+                Direct access on <strong className="text-blue-700 dark:text-gold-300">exams.srsma.in/boardChallenge</strong>. Open for Classes 8, 9, 10, 11, 12 & Repeaters.
               </p>
             </div>
 
@@ -182,18 +182,29 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
                 href={challengeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-4 rounded-xl bg-gradient-to-r from-gold-500 via-gold-600 to-gold-500 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-black text-sm tracking-wide shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 transition-all flex items-center justify-center gap-2.5 group transform hover:-translate-y-0.5 whitespace-nowrap"
+                className="w-full sm:w-auto px-7 py-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-black text-sm tracking-wide shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2.5 group transform hover:-translate-y-0.5 whitespace-nowrap"
               >
                 <span>Launch Board Readiness Challenge Test</span>
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
+              <a
+                href="/assets/images/brochure/Board Readiness Challenge Pamphlet.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-5 py-4 rounded-xl border border-slate-300 dark:border-white/10 hover:border-blue-500 dark:hover:border-gold-500/50 bg-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-xs"
+              >
+                <Download className="w-4 h-4 text-blue-600 dark:text-gold-400" />
+                <span>Download Challenge Pamphlet</span>
+              </a>
+
               <button
                 onClick={onOpenDiagnostic}
-                className="w-full sm:w-auto px-5 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-gold-500 bg-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 whitespace-nowrap"
+                className="w-full sm:w-auto px-5 py-4 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-blue-500 bg-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 whitespace-nowrap"
               >
-                <span>Prefer In-Person at Sun City?</span>
-                <ArrowRight className="w-3.5 h-3.5 text-gold-500" />
+                <span>Prefer In-Person?</span>
+                <ArrowRight className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
               </button>
             </div>
           </div>
@@ -206,7 +217,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
             </span>
             <span>•</span>
             <span className="flex items-center gap-1.5">
-              <Award className="w-3.5 h-3.5 text-gold-500" />
+              <Award className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
               <span>Recognized for SRSMA Arjuna Batch Scholarships</span>
             </span>
             <span>•</span>
