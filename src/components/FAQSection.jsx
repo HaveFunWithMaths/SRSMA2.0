@@ -80,7 +80,7 @@ export default function FAQSection({ onOpenDiagnostic }) {
   };
 
   return (
-    <section id="faq" className="py-8 md:py-12 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section id="faq" className="py-6 md:py-8 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
         {/* Header */}

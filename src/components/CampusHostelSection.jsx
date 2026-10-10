@@ -107,7 +107,7 @@ export default function CampusHostelSection({ onOpenLightbox }) {
   const currentItems = CAMPUS_DATA[activeTab];
 
   return (
-    <section id="campus" className="py-8 md:py-12 bg-slate-50 dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section id="campus" className="py-6 md:py-8 bg-slate-50 dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}

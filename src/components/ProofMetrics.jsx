@@ -137,10 +137,10 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
   }, [activeCategory]);
 
   return (
-    <section ref={sectionRef} id="results" className="py-8 md:py-14 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section ref={sectionRef} id="results" className="py-6 md:py-8 bg-white dark:bg-navy-950 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
 
       {/* Live Social Proof Ticker Banner */}
-      <div className="bg-slate-900 dark:bg-navy-950 text-slate-200 py-3 border-y border-slate-800 dark:border-slate-850 overflow-hidden mb-8 shadow-xs">
+      <div className="bg-slate-900 dark:bg-navy-950 text-slate-200 py-3 border-y border-slate-800 dark:border-slate-850 overflow-hidden mb-5 shadow-xs">
         <div className="flex w-max animate-marquee space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
             <span key={i} className="flex items-center gap-2">

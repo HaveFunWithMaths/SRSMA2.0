@@ -73,7 +73,7 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic }) {
   return (
     <section
       id="diagnostic-challenge"
-      className="py-8 md:py-12 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-navy-950 dark:via-navy-900 dark:to-navy-950 border-b border-slate-200 dark:border-slate-800 relative overflow-hidden transition-colors duration-200"
+      className="py-6 md:py-8 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-navy-950 dark:via-navy-900 dark:to-navy-950 border-b border-slate-200 dark:border-slate-800 relative overflow-hidden transition-colors duration-200"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-br from-gold-500/10 via-blue-600/5 to-purple-600/10 blur-3xl pointer-events-none -z-10" />

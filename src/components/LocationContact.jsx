@@ -6,7 +6,7 @@ import {
 
 export default function LocationContact() {
   return (
-    <footer id="contact" className="bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 pt-10 pb-8 border-t border-slate-200 dark:border-slate-800 transition-colors duration-200">
+    <footer id="contact" className="bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-slate-300 pt-6 pb-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Top Info & Map Grid */}

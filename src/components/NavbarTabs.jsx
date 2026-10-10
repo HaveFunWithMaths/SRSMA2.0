@@ -70,7 +70,6 @@ export default function NavbarTabs({ activeSection, onOpenDiagnostic, theme, onT
                   e.target.style.display = 'none';
                 }}
               />
-              <div className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-trust-500 rounded-full border-2 border-white dark:border-navy-900"></div>
             </div>
             <div>
               <div className="flex items-center gap-2">

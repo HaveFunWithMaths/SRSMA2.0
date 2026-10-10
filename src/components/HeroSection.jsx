@@ -11,7 +11,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
   return (
     <section
       id="about-srsma"
-      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-navy-950 dark:via-[#081224] dark:to-navy-950 pt-6 pb-8 md:pt-8 md:pb-12 border-b border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white transition-colors duration-200"
+      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-navy-950 dark:via-[#081224] dark:to-navy-950 pt-4 pb-6 md:pt-6 md:pb-8 border-b border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white transition-colors duration-200"
     >
       {/* Backwards-compatibility anchor for #overview */}
       <div id="overview" className="sr-only" />

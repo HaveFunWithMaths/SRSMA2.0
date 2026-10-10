@@ -73,7 +73,7 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
   return (
     <section
       id="scholarship-calculator"
-      className="py-8 md:py-12 bg-slate-50 dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200"
+      className="py-6 md:py-8 bg-slate-50 dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 

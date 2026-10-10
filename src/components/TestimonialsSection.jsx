@@ -60,7 +60,7 @@ export default function TestimonialsSection() {
     : TESTIMONIALS.filter((t) => t.category === filter);
 
   return (
-    <section id="testimonials" className="py-8 md:py-12 bg-white dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section id="testimonials" className="py-6 md:py-8 bg-white dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}

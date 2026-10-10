@@ -52,16 +52,6 @@ const FACULTY_MEMBERS = [
     badge: 'IIT Madras (10+ Yrs Exp)'
   },
   {
-    name: 'Mr. Gopalkrishna',
-    role: 'Guest Faculty & Olympiad Mentor',
-    almaMater: 'IIT Madras (B.Tech)',
-    experience: '4+ Years Teaching | KRMO Rank 7',
-    image: '/assets/images/Mr. Gopalkrishna.jpg',
-    specialty: 'Higher-Order Thinking & Olympiad Level Problem Solving',
-    description: 'Secured Rank 7 in the prestigious Karnataka Regional Mathematics Olympiad (KRMO). Mentors high-aptitude students targeting Top-500 JEE Advanced ranks and National Olympiads.',
-    badge: 'IIT Madras • KRMO Rank 7'
-  },
-  {
     name: 'Mrs. Manisha',
     role: 'Biology Faculty & Student Counseling Expert',
     almaMater: 'Masters in Physiotherapy',
@@ -75,7 +65,7 @@ const FACULTY_MEMBERS = [
 
 export default function FacultySection() {
   return (
-    <section id="faculty" className="py-8 md:py-12 bg-slate-50 dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
+    <section id="faculty" className="py-6 md:py-8 bg-slate-50 dark:bg-navy-900 border-b border-slate-200 dark:border-slate-800 relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
@@ -152,8 +142,8 @@ export default function FacultySection() {
           </div>
         </div>
 
-        {/* 5 Core Faculty Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 4 Core Faculty Cards Grid (2x2 on Desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {FACULTY_MEMBERS.map((fac, idx) => (
             <div
               key={idx}
