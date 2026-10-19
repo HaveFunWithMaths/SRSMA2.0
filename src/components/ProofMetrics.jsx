@@ -69,7 +69,7 @@ const KPI_CARDS = [
 const TICKER_ITEMS = [
   '🏆 99.48 %ile Top JEE Main Score',
   '🔥 Early Bird Discount for Students Registering Before Oct 31st',
-  '🎓 Merit-Based Scholarships Up to 100% via Board Readiness Challenge',
+  '📝 Instant 5-Page Diagnostic Report via Board Readiness Challenge',
   '⚡ 10 / 16 Qualified in 1st JEE Main Batch (62.5%)',
   '👨‍🏫 100% Core Faculty from IIT Kharagpur, IIT Madras & NIT Warangal',
   '🎯 Free Board Readiness Challenge Diagnostic Test at exams.srsma.in/boardChallenge',
@@ -89,7 +89,7 @@ const RESULT_GALLERY = [
   {
     id: 2,
     title: 'JEE Main 2026 Top Scores',
-    subtitle: '99.48 %ile & High Percentile Cohort',
+    subtitle: '10 of 16 Students Cracking JEE Main',
     src: '/assets/images/JEEMain2026Results.png',
     badge: 'JEE Main 2026',
   },
@@ -102,10 +102,10 @@ const RESULT_GALLERY = [
   },
   {
     id: 4,
-    title: 'JEE Main 2025 Historic Batch',
-    subtitle: '10 of 16 Students Cracking JEE Main',
+    title: 'Class 10 Boards Results',
+    subtitle: 'Young Achievers!!',
     src: '/assets/images/JEEMain2025Results.png',
-    badge: 'Inaugural Batch Record',
+    badge: 'Class 10 Boards',
   }
 ];
 
@@ -221,11 +221,10 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
                 <button
                   key={tab.id}
                   onClick={() => setActiveCategory(tab.id)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    activeCategory === tab.id
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${activeCategory === tab.id
                       ? 'bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-400 dark:to-gold-500 dark:text-navy-950 shadow-xs dark:shadow-glow-champagne'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -294,13 +293,13 @@ export default function ProofMetrics({ onOpenLightbox, onOpenDiagnostic }) {
           )}
         </div>
 
-          {/* Bottom Trust Note */}
-          <div className="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-2">
-            <span>All scorecards and roll numbers are available for verification at our Sun City campus office.</span>
-            <span className="text-gold-600 dark:text-gold-400 font-bold">100% Genuine Hyderabad Campus Record</span>
-          </div>
-
+        {/* Bottom Trust Note */}
+        <div className="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-2">
+          <span>All scorecards and roll numbers are available for verification at our Sun City campus office.</span>
+          <span className="text-gold-600 dark:text-gold-400 font-bold">100% Genuine Hyderabad Campus Record</span>
         </div>
-      </section>
-    );
-  }
+
+      </div>
+    </section>
+  );
+}

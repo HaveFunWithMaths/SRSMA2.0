@@ -30,7 +30,7 @@ export default function AdmissionForm() {
       `*Current Class:* ${formData.currentClass}%0A` +
       `*Target Exam:* ${formData.targetExam}%0A` +
       `*WhatsApp Phone:* ${formData.phone}%0A` +
-      `*Inquiry Details:* ${formData.query || 'Interested in batch admissions and scholarship diagnostic test'}%0A` +
+      `*Inquiry Details:* ${formData.query || 'Interested in batch admissions and diagnostic assessment'}%0A` +
       `------------------------------------%0A` +
       `_Submitted via SRSMA Official Website_`;
 
@@ -56,7 +56,7 @@ export default function AdmissionForm() {
             </h2>
 
             <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Because we enforce a strict 30-student batch limit, seats fill rapidly every academic cycle. Speak directly with our IIT Dean to evaluate your child’s preparation timeline.
+              Because we enforce a strict 30-student batch limit, seats fill rapidly every academic cycle. Speak directly with our Academic Director to evaluate your child’s preparation timeline.
             </p>
 
             {/* Benefit Checkpoints */}
@@ -86,8 +86,8 @@ export default function AdmissionForm() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Up to 100% Merit Scholarship Available</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Recognizing deserving talent based on performance in our diagnostic screening.</p>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Instant 5-Page Board Diagnostic Report</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Pinpoint conceptual score leaks and build a personalized 3-month improvement roadmap.</p>
                 </div>
               </div>
             </div>

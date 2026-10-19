@@ -47,19 +47,19 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
 
             {/* Main Title & Dynamic Tagline */}
             <div className="space-y-2.5">
-              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-slate-900 dark:text-white tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-prussian-700 dark:text-white tracking-tight leading-[1.12]">
                 <span className="block">Shri Ram</span>
                 <span className="block">Smart Minds Academy</span>
               </h1>
 
-              <p className="text-xl sm:text-2xl md:text-3xl font-display font-extrabold text-gradient-gold leading-snug">
-                Top Coaching with Personal Care, Not Heavy Stress
+              <p className="text-xl sm:text-2xl md:text-3xl font-display font-extrabold text-hero-tagline leading-snug">
+                Unlock Your Potential with SRSMA
               </p>
             </div>
 
             {/* Subtext */}
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-blue-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and weekly WhatsApp analytics.
+              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-blue-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and transparent performance tracking.
             </p>
 
             {/* CTA Buttons Strip */}
@@ -186,7 +186,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                         <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Amal M Das.png" alt="Mr. Amal M Das" />
                         <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Thirumala.jpg" alt="Mr. Thirumala" />
                         <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Ninad.jpg" alt="Mr. Ninad" />
-                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Brajesh.jpg" alt="Mr. Brajesh" />
+                        <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-navy-900 object-cover" src="/assets/images/Mr. Brajesh.jpg" alt="Mr. Vrajesh" />
                       </div>
                       <span className="text-slate-600 dark:text-slate-300 text-[11px] font-medium">IIT Kharagpur, IIT Madras, NIT Warangal</span>
                     </div>

@@ -237,7 +237,7 @@ export default function StudentResourcesPortal({
     };
 
     const colors = {
-      Maths: '#3b82f6',
+      Maths: '#1C39BB',
       Physics: '#f97316',
       Chemistry: '#10b981',
       Biology: '#8b5cf6',

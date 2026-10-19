@@ -10,7 +10,7 @@ const FAQ_CATEGORIES = [
   { id: 'admissions', label: 'Admissions & Batches' },
   { id: 'academics', label: 'Academics & Boards' },
   { id: 'faculty', label: 'IIT Mentors & Doubts' },
-  { id: 'diagnostic', label: 'Diagnostic Test & Scholarship' },
+  { id: 'diagnostic', label: 'Board Readiness Challenge' },
   { id: 'hostels', label: 'Hostel & Commute' }
 ];
 
@@ -23,7 +23,7 @@ const FAQS = [
   {
     category: 'admissions',
     question: 'How can parents enroll for the 2027–2029 academic cycle?',
-    answer: 'Admissions are conducted on a first-come, first-served basis after the student completes the free SRSMA Board Readiness Challenge Diagnostic Test (either online at exams.srsma.in/boardChallenge or in-person at our Sun City center). Once conceptual readiness is assessed, our Academic Dean sits with parents for a 1-on-1 counseling session to finalize the program and scholarship slab.'
+    answer: 'Admissions are conducted on a first-come, first-served basis. Students can complete the free SRSMA Board Readiness Challenge (either online at exams.srsma.in/boardChallenge or in-person at our Sun City center) to diagnose conceptual strengths and score leaks. Our Academic Director sits with parents for a 1-on-1 counseling session to review the 5-page diagnostic report and finalize the program.'
   },
   {
     category: 'academics',
@@ -38,17 +38,17 @@ const FAQS = [
   {
     category: 'faculty',
     question: 'Who actually clears student doubts on a daily basis?',
-    answer: '100% of doubts are solved directly by our core IITian and NITian faculty (Mr. Thirumala, Mr. Ninad, Mr. Brajesh, etc.). Unlike mass institutes where senior teachers leave immediately after lectures and dump doubts onto junior college interns or app chatbots, SRSMA students sit face-to-face across our senior faculty every single day.'
+    answer: '100% of doubts are solved directly by our core IITian and NITian faculty (Mr. Thirumala, Mr. Ninad, Mr. Vrajesh, etc.). Unlike mass institutes where senior teachers leave immediately after lectures and dump doubts onto junior college interns or app chatbots, SRSMA students sit face-to-face across our senior faculty every single day.'
   },
   {
     category: 'faculty',
-    question: 'What is the role of Chief Academic Mentor Mr. Amal M Das?',
-    answer: 'Mr. Amal M Das is an alumnus of IIT Kharagpur (B.Tech Honors) and holds a Masters in Psychology. He specializes in adolescent performance psychology and competitive anxiety management. He conducts regular 1-on-1 counseling, anti-burnout mindset coaching, and focus conditioning to ensure students remain emotionally calm, confident, and resilient under exam-day conditions.'
+    question: 'What is the role of Academic Director & Maths HOD Mr. Amal M Das?',
+    answer: 'Mr. Amal M Das is an alumnus of IIT Kharagpur (B.Tech Honors) and holds a Masters in Psychology. As Academic Director and Maths HOD, he specializes in adolescent performance psychology and competitive anxiety management. He conducts regular 1-on-1 counseling, anti-burnout mindset coaching, and focus conditioning to ensure students remain emotionally calm, confident, and resilient under exam-day conditions.'
   },
   {
     category: 'diagnostic',
-    question: 'What is the SRSMA Board Readiness Challenge Diagnostic Test and is it free?',
-    answer: 'The SRSMA Board Readiness Challenge is a 100% free conceptual screening test accessible at exams.srsma.in/boardChallenge. It evaluates student problem-solving speed, foundational accuracy, and syllabus retention across Physics, Chemistry, Mathematics, and Biology. High performers qualify for merit scholarships of up to 100% tuition fee waivers.'
+    question: 'What is the SRSMA Board Readiness Challenge and is it free?',
+    answer: 'The SRSMA Board Readiness Challenge is a 100% free conceptual diagnostic assessment accessible at exams.srsma.in/boardChallenge for Class 10 students (aligned with CBSE & State Board syllabi). It features 20 conceptual questions across Mathematics and Science in 20 minutes, delivering an instant 5-page diagnostic report analyzing concept mastery, question-type strengths, speed, accuracy, and personalized action plans — followed by a free 1-on-1 consultation with Academic Director Mr. Amal M Das.'
   },
   {
     category: 'diagnostic',
@@ -127,8 +127,8 @@ export default function FAQSection({ onOpenDiagnostic }) {
               <div
                 key={idx}
                 className={`rounded-2xl border transition-all duration-200 shadow-xs overflow-hidden ${isOpen
-                    ? 'border-blue-500/40 dark:border-gold-500/40 bg-white dark:bg-navy-900/90 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)]'
-                    : 'border-slate-200 dark:border-white/[0.08] bg-slate-50/80 dark:bg-navy-900/60 hover:border-slate-300 dark:hover:border-gold-500/30'
+                  ? 'border-blue-500/40 dark:border-gold-500/40 bg-white dark:bg-navy-900/90 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_25px_-5px_rgba(0,0,0,0.5)]'
+                  : 'border-slate-200 dark:border-white/[0.08] bg-slate-50/80 dark:bg-navy-900/60 hover:border-slate-300 dark:hover:border-gold-500/30'
                   }`}
               >
                 <button
@@ -141,8 +141,8 @@ export default function FAQSection({ onOpenDiagnostic }) {
                   </span>
                   <div className={`p-1.5 rounded-full shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-blue-600 text-white dark:bg-gradient-to-r dark:from-gold-300 dark:to-gold-500 dark:text-navy-950 dark:shadow-glow-champagne' : 'bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
                     }`}>
-                  <ChevronDown className="w-4 h-4" />
-                </div>
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
                 </button>
 
                 <AnimatePresence initial={false}>

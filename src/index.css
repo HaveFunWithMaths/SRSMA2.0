@@ -34,7 +34,7 @@
     border-radius: 4px;
   }
   html:not(.dark) ::-webkit-scrollbar-thumb:hover {
-    background: #2563EB;
+    background: #1C39BB;
   }
 }
 
@@ -46,7 +46,20 @@
   }
 
   html:not(.dark) .text-gradient-gold {
-    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #0284C7 100%);
+    background: linear-gradient(135deg, #0E1B5B 0%, #1C39BB 55%, #2A4CE2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Dedicated Hero Tagline: Distinct Warm Amber-Gold/Sunset in Light Mode, Radiant Champagne in Dark Mode */
+  .text-hero-tagline {
+    background: linear-gradient(135deg, #B45309 0%, #D97706 45%, #EA580C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  html.dark .text-hero-tagline {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FDE68A 30%, #F59E0B 75%, #D97706 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -68,14 +81,16 @@
     box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.3), inset 0 1px 0 0 rgba(254, 243, 199, 0.25);
   }
 
+  .text-gradient-persian,
   .text-gradient-cobalt {
-    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #0284C7 100%);
+    background: linear-gradient(135deg, #0E1B5B 0%, #1C39BB 50%, #2A4CE2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+  html.dark .text-gradient-persian,
   html.dark .text-gradient-cobalt {
-    background: linear-gradient(135deg, #93C5FD 0%, #60A5FA 50%, #38BDF8 100%);
+    background: linear-gradient(135deg, #C7D2FE 0%, #A5B4FC 50%, #6366F1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -163,8 +178,13 @@
     animation: marquee 30s linear infinite;
   }
 
-  .animate-marquee:hover {
-    animation-play-state: paused;
+  @keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+  .animate-progress {
+    animation: progress 5.5s linear;
   }
 }
 

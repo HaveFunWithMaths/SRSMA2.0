@@ -43,7 +43,7 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
       batchName = 'SRSMA Arjuna Super-30 Cohort';
       batchCap = 'Strictly Capped at 30 Enrolled Students';
       baseScholarship = 70;
-      focus = 'Advanced multi-concept problem solving with Guest Olympiad faculty and direct Chief Mentor supervision.';
+      focus = 'Advanced multi-concept problem solving with Guest Olympiad faculty and direct Academic Director supervision.';
     } else if (selectedClass === '8' || selectedClass === '9' || selectedClass === '10') {
       batchName = 'Junior Foundation & Olympiad Accelerator';
       batchCap = 'Max 25 Students';
@@ -265,10 +265,10 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
               <div className="p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 to-indigo-500/10 dark:from-gold-500/15 dark:to-amber-500/10 border border-blue-200 dark:border-gold-500/30 space-y-2">
                 <div className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                   <Trophy className="w-4 h-4 text-blue-600 dark:text-gold-400" />
-                  <span>How to Claim This Scholarship?</span>
+                  <span>Free Board Readiness Challenge</span>
                 </div>
                 <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Take the free 45-min SRSMA Board Readiness Challenge Diagnostic Test online to calibrate your scholarship entitlement.
+                  Take the free 20-min SRSMA Board Readiness Challenge online to evaluate conceptual mastery and score leaks.
                 </p>
               </div>
 
@@ -280,7 +280,7 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
                   rel="noopener noreferrer"
                   className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-black text-xs tracking-wide shadow-md transition-all flex items-center justify-center gap-2 group text-center"
                 >
-                  <span>Take Board Readiness Challenge to Unlock Scholarship</span>
+                  <span>Take Free Board Readiness Challenge Test</span>
                   <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
 
@@ -288,7 +288,7 @@ export default function ScholarshipCalculator({ onOpenDiagnostic }) {
                   onClick={onOpenDiagnostic}
                   className="w-full py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-navy-900 hover:bg-slate-200 dark:hover:bg-navy-850 border border-slate-200 dark:border-white/[0.08] text-slate-800 dark:text-slate-200 text-xs font-bold transition-colors"
                 >
-                  Book 1-on-1 Dean Counseling
+                  Book 1-on-1 Director Counseling
                 </button>
               </div>
 

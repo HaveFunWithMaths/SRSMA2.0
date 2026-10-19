@@ -45,9 +45,9 @@ const FLYWHEEL_STEPS = [
   },
   {
     step: 'Step 5',
-    title: 'Parent WhatsApp Analytics',
+    title: 'Continuous Progress Tracking',
     subtitle: 'Zero Surprises At Exam Time',
-    description: 'Granular test marks, attendance, and faculty behavioral notes delivered directly to parents every weekend.',
+    description: 'Comprehensive test marks, attendance, and faculty feedback shared directly with parents to track steady improvement.',
     icon: BarChart2,
     color: 'from-rose-500/20 to-orange-500/20',
     iconColor: 'text-rose-500'
@@ -68,12 +68,12 @@ const COMPARISON_POINTS = [
   {
     feature: 'Parent Communication & Updates',
     massFactory: 'Generic automated SMS or silence until fees are due. Parents have zero direct faculty contact.',
-    srsma: 'Weekly granular performance & test analytics shared directly to parent WhatsApp with teacher notes.',
+    srsma: 'Transparent performance & test analytics shared directly with parents alongside individual teacher notes.',
   },
   {
     feature: 'Exam Anxiety & Mental Health',
     massFactory: 'High-pressure atmosphere leading to burnout, guilt, and severe exam-day performance anxiety.',
-    srsma: 'Dedicated mental health & counseling headed by IIT Kharagpur alumnus and psychologist Mr. Amal M Das.',
+    srsma: 'Dedicated mental health & counseling headed by IIT Kharagpur alumnus and psychologist Mr. Amal M Das (Academic Director & Maths HOD).',
   },
   {
     feature: 'Board Exams vs Competitive Exams',
@@ -161,14 +161,14 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900 dark:text-white">SRSMA Academic Mentor</h4>
+                  <h4 className="text-xs font-bold text-slate-900 dark:text-white">Academic Progress Desk</h4>
                   <p className="text-[10px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-semibold">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Verified Weekly Update to Parent
+                    Direct Faculty Update to Parents
                   </p>
                 </div>
               </div>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">Sunday 6:30 PM</span>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">Progress Update</span>
             </div>
 
             {/* Chat bubble mock */}
@@ -216,12 +216,12 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
             </p>
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)]">
-                <div className="text-base font-black text-slate-900 dark:text-white">Every Sunday</div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">Automated granular scorecards</div>
+                <div className="text-base font-black text-slate-900 dark:text-white">Continuous Feedback</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Regular performance updates</div>
               </div>
               <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)]">
                 <div className="text-base font-black text-slate-900 dark:text-white">Open Door</div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">Meet Dean or Mentors anytime</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">Meet Academic Director or Mentors anytime</div>
               </div>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
                 onClick={onOpenDiagnostic}
                 className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-bold text-xs tracking-wide transition-all shadow-md dark:shadow-glow-champagne flex items-center gap-1.5 whitespace-nowrap"
               >
-                <span>Book Dean Consultation</span>
+                <span>Book Director Consultation</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

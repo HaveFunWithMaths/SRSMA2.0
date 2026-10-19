@@ -182,6 +182,7 @@ export default function App() {
         {/* 4. Dedicated Board Readiness Challenge Diagnostic Test Section */}
         <DiagnosticChallengeSection
           onOpenDiagnostic={() => setIsDiagnosticOpen(true)}
+          onOpenLightbox={(img) => setLightboxImage(img)}
         />
 
         {/* 5. Proof & Key Metrics + Live Proof Ticker */}

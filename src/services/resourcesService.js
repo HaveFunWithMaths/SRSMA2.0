@@ -53,7 +53,7 @@ export const RESOURCE_CLASSES = {
 export const SUBJECT_METADATA = {
   Maths: {
     name: 'Maths',
-    color: '#3b82f6', // Tailwind blue-500
+    color: '#1C39BB', // Persian Blue (#1C39BB)
     bgClass: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30',
     activeCardClass: 'ring-2 ring-blue-500 bg-blue-500/10 dark:bg-blue-950/40',
     iconName: 'Calculator',

@@ -14,7 +14,7 @@ export default function AnnouncementBar({ onOpenDiagnostic }) {
             Admissions 2027–29
           </span>
           <span className="text-slate-200 font-medium text-xs">
-            <strong className="text-amber-400">Early Bird Discount</strong> for registrations before <strong className="text-white underline decoration-amber-400">Oct 31st</strong> • <strong className="text-emerald-400">Merit-Based Scholarships</strong> up to 100% via Board Readiness Challenge
+            <strong className="text-amber-400">Early Bird Discount</strong> for registrations before <strong className="text-white underline decoration-amber-400">Oct 31st</strong> • <strong className="text-emerald-400">Free Board Readiness Challenge</strong> for Class 10 Students (20-Min Test)
           </span>
         </div>
 

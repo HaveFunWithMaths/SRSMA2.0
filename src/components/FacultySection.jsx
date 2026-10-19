@@ -6,7 +6,7 @@ import {
 
 const CHIEF_MENTOR = {
   name: 'Mr. Amal M Das',
-  role: 'Co-Founder & Chief Academic Mentor',
+  role: 'Academic Director & Maths HOD',
   almaMater: 'IIT Kharagpur (B.Tech Honors) • MA Psychology',
   specialization: 'Adolescent Psychology, Academic Pressure Decompression & Strategic Exam Mastery',
   image: '/assets/images/Mr. Amal M Das.png',
@@ -33,23 +33,23 @@ const FACULTY_MEMBERS = [
   },
   {
     name: 'Mr. Ninad',
-    role: 'Chemistry Faculty & Academic Mentor',
+    role: 'Chemistry HOD',
     almaMater: 'IIT Madras (B.Tech + M.Tech, Dept Topper)',
     experience: '5+ Years Teaching | 6+ Years IIT Mentoring',
     image: '/assets/images/Mr. Ninad.jpg',
     specialty: 'Organic Mechanism Clarity & Inorganic Mnemonics',
     description: 'Department Topper at IIT Madras. Master of conceptual chemistry, converting abstract reaction mechanisms and physical chemistry into score-maximizing, intuitive patterns.',
-    badge: 'IIT Madras Dept Topper'
+    badge: 'Chemistry HOD • IIT Madras'
   },
   {
-    name: 'Mr. Brajesh Goutam',
-    role: 'Senior Physics Faculty',
+    name: 'Mr. Vrajesh Goutam',
+    role: 'Physics HOD',
     almaMater: 'IIT Madras (B.Tech)',
     experience: '10+ Years Top-Tier Kota & National Experience',
     image: '/assets/images/Mr. Brajesh.jpg',
     specialty: 'Rotational Mechanics, Electrodynamics & Modern Physics',
     description: 'Former Senior Physics Faculty at Kota powerhouses including Bansal Classes, Byju’s, and Sri Chaitanya. Renowned for instilling deep intuition for physical laws.',
-    badge: 'IIT Madras (10+ Yrs Exp)'
+    badge: 'Physics HOD • IIT Madras'
   },
   {
     name: 'Mrs. Manisha',
@@ -103,7 +103,7 @@ export default function FacultySection() {
                   />
                 </div>
                 <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white dark:from-gold-400 dark:to-gold-600 dark:text-navy-950 text-[11px] font-black rounded-full shadow-md whitespace-nowrap uppercase tracking-wider">
-                  Chief Academic Mentor
+                  Academic Director & Maths HOD
                 </span>
               </div>
 
