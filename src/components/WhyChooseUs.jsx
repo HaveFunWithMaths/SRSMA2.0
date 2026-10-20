@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-  Users, CheckCircle2, XCircle, ShieldCheck,
-  MessageSquare, Sparkles, ArrowRight,
-  Target, FileSpreadsheet, Brain, Laptop, BarChart2,
-  ExternalLink
+  Users, CheckCircle2, XCircle, Sparkles, ArrowRight,
+  FileSpreadsheet, Brain, Laptop, BarChart2
 } from 'lucide-react';
 
 const FLYWHEEL_STEPS = [
@@ -148,82 +146,6 @@ export default function WhyChooseUs({ onOpenDiagnostic }) {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* WhatsApp Real-time Parent Transparency Preview & Comparison */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
-          {/* WhatsApp Report Card Visual */}
-          <div className="lg:col-span-5 bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/[0.08] rounded-3xl p-5 sm:p-6 card-elevation-subtle dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_20px_40px_-15px_rgba(0,0,0,0.6)] relative overflow-hidden">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/[0.08]">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
-                  <MessageSquare className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-900 dark:text-white">Academic Progress Desk</h4>
-                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-semibold">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Direct Faculty Update to Parents
-                  </p>
-                </div>
-              </div>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">Progress Update</span>
-            </div>
-
-            {/* Chat bubble mock */}
-            <div className="mt-4 space-y-3 text-xs">
-              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-500/20 text-slate-800 dark:text-slate-200 space-y-2">
-                <p className="font-semibold text-emerald-800 dark:text-emerald-300">
-                  Respected Parents, weekly progress report for <span className="underline decoration-emerald-500 font-bold">Rohan S. (Batch JEE-27)</span>:
-                </p>
-                <div className="space-y-1 text-[11px] text-slate-700 dark:text-slate-300">
-                  <div className="flex justify-between">
-                    <span>• Rotational Motion OnlineTest:</span>
-                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">84 / 100 (Class Rank 3)</strong>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>• DPP Assignment Completion:</span>
-                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">100% (On-time)</strong>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>• 1-on-1 IITian Doubt Sessions:</span>
-                    <strong className="text-emerald-700 dark:text-emerald-300 font-bold">3 Resolved (Physics & Calc)</strong>
-                  </div>
-                </div>
-                <p className="text-[10px] text-slate-600 dark:text-slate-400 italic pt-1 border-t border-emerald-500/20">
-                  "Rohan is excelling in concept grasping. We are reinforcing multi-concept torque problems this Wednesday." — Er. Pradeep (IIT KGP)
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-4 pt-3 border-t border-slate-200 dark:border-white/[0.08] flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
-              <span>Zero secrecy. 100% parental peace of mind.</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">#TransparencyFirst</span>
-            </div>
-          </div>
-
-          {/* Quick Pitch next to it */}
-          <div className="lg:col-span-7 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-gold-200 bg-blue-50 dark:bg-gold-500/15 px-3 py-1 rounded-full border border-blue-200 dark:border-gold-500/35 dark:shadow-[0_0_12px_-3px_rgba(245,158,11,0.2)] inline-block">
-              Total Transparency Guarantee
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 dark:text-white leading-tight">
-              You Never Have to Wonder <span className="text-gradient-gold">How Your Child is Doing</span>
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              At corporate coaching factories, parents are left in total dark until exam results drop or next installment fees are due. At SRSMA, our core IITian faculty maintains personal direct communication with parents every single week.
-            </p>
-            <div className="grid grid-cols-2 gap-3 pt-2">
-              <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)]">
-                <div className="text-base font-black text-slate-900 dark:text-white">Continuous Feedback</div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">Regular performance updates</div>
-              </div>
-              <div className="p-3.5 rounded-xl bg-white dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)]">
-                <div className="text-base font-black text-slate-900 dark:text-white">Open Door</div>
-                <div className="text-xs text-slate-600 dark:text-slate-400">Meet Academic Director or Mentors anytime</div>
-              </div>
-            </div>
           </div>
         </div>
 

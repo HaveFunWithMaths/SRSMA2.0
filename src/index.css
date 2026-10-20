@@ -177,14 +177,5 @@
     display: flex;
     animation: marquee 30s linear infinite;
   }
-
-  @keyframes progress {
-    0% { width: 0%; }
-    100% { width: 100%; }
-  }
-
-  .animate-progress {
-    animation: progress 5.5s linear;
-  }
 }
 
