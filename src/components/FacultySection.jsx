@@ -10,7 +10,7 @@ const CHIEF_MENTOR = {
   almaMater: 'IIT Kharagpur (B.Tech Honors) • MA Psychology',
   specialization: 'Adolescent Psychology, Academic Pressure Decompression & Strategic Exam Mastery',
   image: '/assets/images/Mr. Amal M Das.png',
-  bio: 'A distinguished alumnus of IIT Kharagpur with a dual specialization in Engineering and Psychology. Mr. Das bridges the critical gap between high-pressure academic competition and emotional calmness. He personally trains students to eliminate exam-day panic, conquer negative self-talk, and consistently deliver their peak performance under intense timed testing.',
+  bio: 'Distinguished IIT Kharagpur alumnus bridging intense competition with emotional composure. Personally trains students to conquer exam anxiety, build test stamina, and unlock peak conceptual clarity under pressure.',
   keyHighlights: [
     'IIT Kharagpur B.Tech (Honors) Graduate',
     'Masters in Psychology (Adolescent Dynamics & Performance Anxiety)',
@@ -28,7 +28,7 @@ const FACULTY_MEMBERS = [
     image: '/assets/images/Mr. Thirumala.png',
     fallbackImage: '/assets/images/Mr. Thirumala.jpg',
     specialty: 'Advanced Calculus, Coordinate Geometry & Algebra Mastery',
-    description: 'Brings structured algorithmic frameworks to complex math. Teaches students how to dismantle intimidating multi-concept JEE Advanced problems into intuitive step-by-step logic.',
+    description: 'Specializes in dismantling complex JEE Advanced problems into intuitive, step-by-step algorithmic frameworks.',
     badge: 'NIT Warangal'
   },
   {
@@ -38,7 +38,7 @@ const FACULTY_MEMBERS = [
     experience: '5+ Years Teaching | 6+ Years IIT Mentoring',
     image: '/assets/images/Mr. Ninad.jpg',
     specialty: 'Organic Mechanism Clarity & Inorganic Mnemonics',
-    description: 'Department Topper at IIT Madras. Master of conceptual chemistry, converting abstract reaction mechanisms and physical chemistry into score-maximizing, intuitive patterns.',
+    description: 'IIT Madras Department Topper. Converts abstract reaction mechanisms and physical chemistry into score-maximizing, intuitive patterns.',
     badge: 'Chemistry HOD • IIT Madras'
   },
   {
@@ -48,7 +48,7 @@ const FACULTY_MEMBERS = [
     experience: '10+ Years Top-Tier Kota & National Experience',
     image: '/assets/images/Mr. Brajesh.jpg',
     specialty: 'Rotational Mechanics, Electrodynamics & Modern Physics',
-    description: 'Former Senior Physics Faculty at Kota powerhouses including Bansal Classes, Byju’s, and Sri Chaitanya. Renowned for instilling deep intuition for physical laws.',
+    description: 'Former Senior Faculty at Kota powerhouses (Bansal Classes, Sri Chaitanya). Renowned for building first-principles intuition in physical laws.',
     badge: 'Physics HOD • IIT Madras'
   },
   {
@@ -58,7 +58,7 @@ const FACULTY_MEMBERS = [
     experience: '4+ Years Teaching & Teen Counseling',
     image: '/assets/images/Mrs. Manisha.jpg',
     specialty: 'NEET Botany, Zoology & Stress-Free Retention',
-    description: 'Specializes in high-retention NCERT diagrammatic dissection for NEET Medical aspirants alongside providing warm, empathetic academic counseling to alleviate teen study burnout.',
+    description: 'High-retention NCERT diagrammatic dissection for NEET aspirants, paired with empathetic student counseling to prevent academic burnout.',
     badge: 'Medical & Biology Expert'
   }
 ];
@@ -78,7 +78,7 @@ export default function FacultySection() {
             Learn Directly From <span className="text-gradient-gold">The Masters</span>, Not Junior Tutors
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-            At large commercial coaching centers, top teachers only teach the select ranker batch while other students are left with fresh college graduates. At SRSMA, every single class and doubt session is conducted by IIT & NIT alumni.
+            Zero junior tutors or trainee graduates. Every single classroom lecture and doubt-solving session at SRSMA is conducted personally by our core IIT & NIT alumni.
           </p>
         </div>
 

@@ -11,17 +11,37 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
   return (
     <section
       id="about-srsma"
-      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-navy-950 dark:via-[#081224] dark:to-navy-950 pt-4 pb-6 md:pt-6 md:pb-8 border-b border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white transition-colors duration-200"
+      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 dark:from-navy-950 dark:via-[#081224] dark:to-navy-950 pb-6 md:pb-8 border-b border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white transition-colors duration-200"
     >
       {/* Backwards-compatibility anchor for #overview */}
       <div id="overview" className="sr-only" />
 
+      {/* Top Banner Covering Entire Horizontal Screen */}
+      <div
+        onClick={() => onOpenLightbox && onOpenLightbox({
+          src: '/assets/images/HeroSection/banner.jpeg',
+          title: 'SRSMA Results 2026',
+          caption: 'Where Guidance Meets Determination, Results Follow • 10 Out of 16 Students JEE Main Qualified'
+        })}
+        className="w-full relative overflow-hidden bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-sm cursor-pointer group"
+      >
+        <img
+          src="/assets/images/HeroSection/banner.jpeg"
+          alt="SRSMA Results 2026 — 10 Out of 16 Students JEE Main Qualified"
+          className="w-full h-auto block select-none"
+          loading="eager"
+        />
+        <div className="absolute bottom-2 sm:bottom-3 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 backdrop-blur-xs text-white text-[11px] font-medium px-2.5 py-1 rounded-full pointer-events-none flex items-center gap-1.5 shadow-sm">
+          <span>Click to zoom</span>
+        </div>
+      </div>
+
       {/* Atmospheric Ambient Glow Mesh */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[420px] bg-gradient-to-br from-gold-500/10 via-blue-500/5 to-indigo-500/10 dark:from-gold-500/15 dark:via-blue-600/10 dark:to-indigo-600/15 blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-20 right-10 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[420px] bg-gradient-to-br from-gold-500/10 via-blue-500/5 to-indigo-500/10 dark:from-gold-500/15 dark:via-blue-600/10 dark:to-indigo-600/15 blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-10 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-gold-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 md:pt-8">
 
         {/* Unified 2-Column Split Hero Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -46,20 +66,20 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
             </div>
 
             {/* Main Title & Dynamic Tagline */}
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-prussian-700 dark:text-white tracking-tight leading-[1.12]">
                 <span className="block">Shri Ram</span>
                 <span className="block">Smart Minds Academy</span>
               </h1>
 
               <p className="text-xl sm:text-2xl md:text-3xl font-display font-extrabold text-hero-tagline leading-snug">
-                Unlock Your Potential with SRSMA
+                Personal Mentorship by Top IIT & NIT Alumni
               </p>
             </div>
 
             {/* Subtext */}
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Where <strong className="text-slate-900 dark:text-white font-bold">100% IIT & NIT alumni</strong> personally mentor your child. Strictly capped at <strong className="text-blue-700 dark:text-gold-300 font-bold">30 students per batch</strong> for JEE (Main & Advanced), NEET, Foundations & Boards with zero factory burnout and transparent performance tracking.
+              Strictly capped at <strong className="text-slate-900 dark:text-white font-bold">30 students per batch</strong>. Zero junior tutors, zero mass-factory pressure—just rigorous conceptual clarity and genuine personal care.
             </p>
 
             {/* CTA Buttons Strip */}
@@ -72,22 +92,12 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                 <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
               </button>
 
-              <a
-                href={challengeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-blue-500/60 dark:hover:border-gold-500/60 bg-white dark:bg-navy-900/90 hover:bg-slate-50 dark:hover:bg-navy-800 text-slate-800 dark:text-slate-200 hover:text-blue-700 dark:hover:text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap"
-              >
-                <span>Board Challenge Test</span>
-                <ExternalLink className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
-              </a>
-
               <button
                 onClick={onExploreFaculty}
-                className="w-full sm:w-auto px-4 py-3.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-blue-500/60 dark:hover:border-gold-500/60 bg-white dark:bg-navy-900/90 hover:bg-slate-50 dark:hover:bg-navy-800 text-slate-800 dark:text-slate-200 hover:text-blue-700 dark:hover:text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 <span>Meet Faculty</span>
-                <Users className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
+                <Users className="w-4 h-4 text-blue-600 dark:text-gold-400" />
               </button>
             </div>
 
@@ -95,12 +105,17 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-600 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-slate-800/80">
               <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
                 <ShieldCheck className="w-4 h-4 text-trust-600 dark:text-trust-400" />
-                <span>Max 30 Students Batch</span>
+                <span>Max 30 Students / Batch</span>
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-                <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-gold-400" />
-                <span>Direct IIT Doubt Solving</span>
+                <GraduationCap className="w-4 h-4 text-blue-600 dark:text-gold-400" />
+                <span>100% Core Alumni Faculty</span>
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-trust-600 dark:text-trust-400" />
+                <span>Transparent Progress Tracking</span>
               </span>
             </div>
 
@@ -120,7 +135,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-trust-500 animate-pulse"></span>
                     <span className="text-xs font-bold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
-                      Documented Academic Proof
+                      Classroom Track Record
                     </span>
                   </div>
                   <span className="text-[11px] font-semibold text-blue-700 dark:text-gold-300 bg-blue-50 dark:bg-gold-500/15 px-2 py-0.5 rounded-md border border-blue-200 dark:border-gold-500/40">
@@ -146,9 +161,7 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                       <div className="text-3xl sm:text-4xl font-display font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-gold-200 transition-colors">
                         99.48 <span className="text-lg font-bold text-orange-600 dark:text-gold-400">%ile</span>
                       </div>
-                      <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
-                        Exceptional conceptual mastery across Physics, Chemistry & Math.
-                      </p>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Highest Percentile (1st Batch)</div>
                     </div>
                     <div className="text-right">
                       <span className="inline-block p-2.5 rounded-xl bg-blue-50 dark:bg-gold-500/20 text-blue-600 dark:text-gold-300 group-hover:scale-110 transition-transform shadow-xs">
@@ -164,13 +177,11 @@ export default function HeroSection({ onOpenDiagnostic, onExploreFaculty, onOpen
                   <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] shadow-xs">
                     <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">1st Batch JEE Main</div>
                     <div className="text-xl font-bold text-trust-600 dark:text-trust-400 mt-0.5">10 / 16 (62.5%)</div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Premier qualifying ratio</div>
                   </div>
 
                   <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-navy-950/80 border border-slate-200 dark:border-white/[0.08] shadow-xs">
                     <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Board & IPE Toppers</div>
                     <div className="text-xl font-bold text-blue-600 dark:text-sky-400 mt-0.5">Up to 98%</div>
-                    <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">State Board & CBSE</div>
                   </div>
                 </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Send, Phone, CheckCircle2, ShieldCheck, 
-  Sparkles, Calendar, User, BookOpen, Clock 
+import {
+  Send, Phone, CheckCircle2, ShieldCheck,
+  Sparkles, Calendar, User, BookOpen, Clock
 } from 'lucide-react';
 
 export default function AdmissionForm() {
@@ -41,9 +41,9 @@ export default function AdmissionForm() {
   return (
     <section id="admissions" className="py-6 md:py-8 bg-slate-50 dark:bg-navy-950 border-b border-slate-200 dark:border-white/[0.08] relative transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Left Column: Why Inquire Now */}
           <div className="lg:col-span-5 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:border-gold-500/35 dark:text-gold-200 dark:shadow-[0_0_15px_-4px_rgba(245,158,11,0.2)] text-xs font-semibold uppercase tracking-wider">
@@ -86,7 +86,7 @@ export default function AdmissionForm() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Instant 5-Page Board Diagnostic Report</h4>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white">Instant Diagnostic Report</h4>
                   <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Pinpoint conceptual score leaks and build a personalized 3-month improvement roadmap.</p>
                 </div>
               </div>
@@ -115,9 +115,9 @@ export default function AdmissionForm() {
           <div className="lg:col-span-7">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-500/20 to-blue-600/20 dark:from-gold-500/15 dark:to-amber-500/10 rounded-3xl blur-lg"></div>
-              
+
               <div className="relative bg-white dark:bg-navy-900/90 border border-slate-200 dark:border-white/[0.1] rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_25px_60px_rgba(0,0,0,0.85)] transition-colors duration-200">
-                
+
                 {submitted ? (
                   <div className="text-center py-10 space-y-4">
                     <div className="w-16 h-16 bg-trust-500/20 text-trust-600 dark:text-trust-500 rounded-full flex items-center justify-center mx-auto">

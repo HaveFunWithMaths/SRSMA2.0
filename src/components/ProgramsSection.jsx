@@ -325,46 +325,8 @@ export default function ProgramsSection({ onOpenDiagnostic }) {
                   <Compass className="w-4 h-4" />
                   <span>Batch Schedule</span>
                 </div>
-                <div className="text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-navy-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+                <div className="text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-navy-900 p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 leading-relaxed font-medium">
                   {selectedProgram.schedule}
-                </div>
-
-                {/* Board Readiness Challenge Spotlight Box */}
-                <div className="p-4 rounded-xl bg-blue-50 dark:bg-gold-500/10 border border-blue-200 dark:border-gold-500/30 text-xs text-slate-800 dark:text-slate-200 space-y-2.5">
-                  <div className="font-bold text-blue-900 dark:text-gold-300 flex items-center justify-between">
-                    <span className="flex items-center gap-1.5">
-                      <Trophy className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
-                      <span>Take Board Readiness Challenge</span>
-                    </span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-trust-500 text-navy-950 font-black">
-                      100% FREE
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Appear for our conceptual screening test on <strong className="text-blue-700 dark:text-gold-300">exams.srsma.in/boardChallenge</strong> to identify conceptual blind spots, test speed & accuracy, and receive your instant 5-page diagnostic report.
-                  </p>
-                  <div className="flex flex-wrap items-center gap-3 pt-1">
-                    <a
-                      href={challengeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-700 dark:text-gold-400 hover:underline"
-                    >
-                      <span>Launch Online Test</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                    <span className="text-slate-400 dark:text-slate-600">•</span>
-                    <a
-                      href="/assets/images/brochure/Board Readiness Challenge Pamphlet.pdf"
-                      download
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-bold text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-gold-300 transition-colors"
-                    >
-                      <Download className="w-3 h-3 text-blue-600 dark:text-gold-400" />
-                      <span>Download Pamphlet (PDF)</span>
-                    </a>
-                  </div>
                 </div>
               </div>
 

@@ -6,65 +6,24 @@ import {
   Compass, Check
 } from 'lucide-react';
 
-const HIGHLIGHT_CARDS = [
-  {
-    icon: Target,
-    title: 'Pinpoint Hidden Score Leaks',
-    description: 'Detailed topic-by-topic diagnostic breakdown in Mathematics & Science identifying exact conceptual gaps losing you marks.',
-    badge: 'Precision Analytics',
-    color: 'from-blue-500/20 to-cyan-500/20',
-    borderColor: 'border-blue-500/30',
-    iconColor: 'text-blue-500 dark:text-blue-400'
-  },
-  {
-    icon: BarChart3,
-    title: 'Instant 5-Page Diagnostic Report',
-    description: 'Comprehensive report revealing Performance Overview, Question-Type Breakdown, Speed vs Accuracy analysis, and a 3-Month Action Plan.',
-    badge: '5-Page Report',
-    color: 'from-gold-500/20 to-amber-500/20',
-    borderColor: 'border-gold-500/40',
-    iconColor: 'text-gold-500 dark:text-gold-400'
-  },
-  {
-    icon: Clock,
-    title: 'Timed Speed & Composure Test',
-    description: '20 questions in 20 minutes to evaluate your true problem-solving speed, time-per-question, and exam-day mental composure.',
-    badge: 'Timed Simulation',
-    color: 'from-emerald-500/20 to-teal-500/20',
-    borderColor: 'border-emerald-500/30',
-    iconColor: 'text-trust-500 dark:text-trust-400'
-  },
-  {
-    icon: Brain,
-    title: '1-on-1 Strategy with Academic Director',
-    description: 'Free academic consultation with Mr. Amal M Das (IIT Kharagpur alumnus & Psychologist) to review your diagnostic report and roadmap.',
-    badge: 'Expert Guidance',
-    color: 'from-purple-500/20 to-indigo-500/20',
-    borderColor: 'border-purple-500/30',
-    iconColor: 'text-purple-500 dark:text-purple-400'
-  }
-];
-
-const STEPS = [
+const STEPS_STREAMLINED = [
   {
     step: '01',
-    title: 'Quick Registration',
-    description: 'Visit exams.srsma.in/boardChallenge and enter basic student details in under 30 seconds.'
+    title: 'Take 20-Min Test',
+    description: 'Answer 20 concept-driven Math & Science questions online.',
+    icon: Clock
   },
   {
     step: '02',
-    title: '20-Min Challenge',
-    description: 'Answer 20 curated conceptual problems covering fundamental reasoning and syllabus mastery.'
+    title: 'Get Instant Report',
+    description: 'Receive automated topic-level accuracy & score-leak analytics.',
+    icon: BarChart3
   },
   {
     step: '03',
-    title: 'Instant 5-Page Report',
-    description: 'Get deep analytics highlighting your strengths, speed, accuracy, and syllabus blindspots.'
-  },
-  {
-    step: '04',
-    title: '1-on-1 Consultation',
-    description: 'Meet Academic Director Mr. Amal M Das online or at Sun City center to build your action roadmap.'
+    title: 'Plan Improvement',
+    description: 'Discuss your personalized 3-month action plan with core faculty.',
+    icon: Brain
   }
 ];
 
@@ -112,24 +71,24 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic, onOpenLig
           <div className="text-center max-w-3xl mx-auto mb-6 space-y-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-gold-500/15 dark:border-gold-500/40 dark:text-gold-300 text-xs font-bold uppercase tracking-wider animate-pulse-subtle">
               <Sparkles className="w-4 h-4 text-blue-600 dark:text-gold-400" />
-              <span>100% Free For Class 10 Students • CBSE & State Board Syllabus</span>
+              <span>Complimentary For Class 10 Students • CBSE & State Board</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-slate-900 dark:text-white tracking-tight leading-tight">
-              SRSMA <span className="text-gradient-gold">Board Readiness Challenge</span>
+              Are You Truly <span className="text-gradient-gold">Board Ready?</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-              Are you Board Ready? 20 Questions in 20 Minutes across Mathematics & Science to pinpoint your score leaks and uncover your genuine conceptual standing.
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              A 20-minute conceptual diagnostic designed by IITians to test application, speed, and exam-day composure.
             </p>
           </div>
 
           {/* PROMINENT VISUAL FIRST: Visual Showcase Card */}
           <div className="mb-8 rounded-2xl bg-slate-50 dark:bg-navy-950/90 border border-slate-200 dark:border-white/[0.1] p-4 sm:p-6 shadow-md dark:shadow-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               
               {/* Visual Preview Left Column */}
-              <div className="lg:col-span-6 flex flex-col items-center">
+              <div className="lg:col-span-6 flex flex-col items-center justify-between">
                 {/* Visual View Switcher Tabs */}
                 <div className="flex items-center gap-2 mb-3 w-full justify-center">
                   <button
@@ -190,8 +149,8 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic, onOpenLig
               </div>
 
               {/* Visual Action & Breakdown Right Column */}
-              <div className="lg:col-span-6 space-y-4">
-                <div className="space-y-1">
+              <div className="lg:col-span-6 flex flex-col justify-between space-y-4">
+                <div className="space-y-1.5">
                   <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-[11px] font-bold uppercase tracking-wider">
                     <span>100% Free For Class 10</span>
                   </div>
@@ -199,154 +158,80 @@ export default function DiagnosticChallengeSection({ onOpenDiagnostic, onOpenLig
                     Can You Score 20/20 in 20 Minutes?
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    A high-impact diagnostic assessment aligned with CBSE and State Board syllabi, engineered by IITians to measure concept depth, question application, speed, and accuracy.
+                    A high-impact diagnostic assessment aligned with CBSE & State Board syllabi, engineered by IITians to measure concept depth, application, speed, and accuracy.
                   </p>
                 </div>
 
-                {/* 4 Feature Badges from Official Pamphlet */}
-                <div className="grid grid-cols-2 gap-2.5 pt-1">
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] shadow-2xs">
-                    <div className="text-xs font-bold text-blue-700 dark:text-gold-300">⏱️ 20:00 Minutes</div>
-                    <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Timed testing clock</div>
+                {/* Simple 3-Step Evaluation Process directly inside */}
+                <div className="space-y-2.5 py-1">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    Simple 3-Step Evaluation Process
                   </div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] shadow-2xs">
-                    <div className="text-xs font-bold text-blue-700 dark:text-gold-300">❓ 20 Questions</div>
-                    <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Math & Science concepts</div>
-                  </div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] shadow-2xs">
-                    <div className="text-xs font-bold text-trust-600 dark:text-trust-400">📊 5-Page Report</div>
-                    <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Instant scorecard & gaps</div>
-                  </div>
-                  <div className="p-3 rounded-xl bg-white dark:bg-navy-900 border border-slate-200 dark:border-white/[0.08] shadow-2xs">
-                    <div className="text-xs font-bold text-purple-600 dark:text-purple-400">👨‍🏫 1-on-1 Guidance</div>
-                    <div className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">With Academic Director</div>
+                  
+                  <div className="space-y-2.5">
+                    {STEPS_STREAMLINED.map((step, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 p-3 rounded-xl bg-white dark:bg-navy-900 border border-slate-200/80 dark:border-white/[0.08] shadow-2xs hover:border-blue-400/50 dark:hover:border-gold-500/40 transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-600 dark:bg-gradient-to-br dark:from-gold-300 dark:to-gold-500 text-white dark:text-navy-950 font-black text-xs flex items-center justify-center shrink-0 shadow-xs">
+                          {step.step}
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-slate-900 dark:text-white">{step.title}</div>
+                          <div className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">{step.description}</div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* 5-Page Report Highlights List */}
-                <div className="p-3.5 rounded-xl bg-blue-50/70 dark:bg-gold-500/10 border border-blue-200 dark:border-gold-500/30 text-xs text-slate-800 dark:text-slate-200 space-y-1.5">
-                  <div className="font-bold text-blue-900 dark:text-gold-300 text-xs flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-trust-500" />
-                    <span>What Your 5-Page Report Reveals:</span>
+                {/* Direct CTA Action Buttons & Trust Bar */}
+                <div className="space-y-3 pt-1">
+                  <div className="flex flex-col sm:flex-row items-center gap-2.5">
+                    <a
+                      href={challengeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto flex-1 px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-black text-xs tracking-wide shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 group whitespace-nowrap"
+                    >
+                      <span>Start Free Online Challenge (20 Min)</span>
+                      <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+
+                    <a
+                      href="/assets/images/brochure/Board Readiness Challenge Pamphlet.pdf"
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-4 py-3.5 rounded-xl border border-slate-300 dark:border-white/10 hover:border-blue-500 dark:hover:border-gold-500 bg-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 whitespace-nowrap shadow-2xs"
+                    >
+                      <Download className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
+                      <span>Download Official Flyer (PDF)</span>
+                    </a>
                   </div>
-                  <ul className="text-[11px] text-slate-600 dark:text-slate-300 space-y-1 pl-5 list-disc">
-                    <li><strong>Performance Overview:</strong> Concepts, Application, Speed, and Accuracy ratings</li>
-                    <li><strong>Question-Type Analysis:</strong> Conceptual, Diagram-Based & Formula-Based breakups</li>
-                    <li><strong>Chapter & Topic Priority Map:</strong> Identifies where marks are being lost</li>
-                    <li><strong>Personalized Action Plan:</strong> Clear 3-month roadmap to boost your final score</li>
-                  </ul>
-                </div>
 
-                {/* Direct CTA Action Buttons */}
-                <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-2">
-                  <a
-                    href={challengeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-black text-xs tracking-wide shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 group whitespace-nowrap"
-                  >
-                    <span>Launch Challenge Online</span>
-                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-
-                  <a
-                    href="/assets/images/brochure/Board Readiness Challenge Pamphlet.pdf"
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-4 py-3.5 rounded-xl border border-slate-300 dark:border-white/10 hover:border-blue-500 dark:hover:border-gold-500 bg-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 whitespace-nowrap shadow-2xs"
-                  >
-                    <Download className="w-3.5 h-3.5 text-blue-600 dark:text-gold-400" />
-                    <span>Download Pamphlet (PDF)</span>
-                  </a>
+                  {/* Micro Guarantees Strip */}
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-[11px] text-slate-500 dark:text-slate-400 pt-1">
+                    <span className="flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5 text-trust-500" />
+                      <span>100% Free with No Hidden Fees</span>
+                    </span>
+                    <span>•</span>
+                    <span className="flex items-center gap-1">
+                      <Award className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
+                      <span>Aligned with CBSE & State Boards</span>
+                    </span>
+                    <span>•</span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5 text-blue-500" />
+                      <span>Instant 5-Page Report</span>
+                    </span>
+                  </div>
                 </div>
               </div>
 
             </div>
-          </div>
-
-          {/* DESCRIPTION & 4 EVALUATION PILLARS */}
-          <div className="mb-6 space-y-4">
-            <div className="text-center max-w-2xl mx-auto space-y-1">
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 dark:text-white">
-                Your Score is Only the Start. <span className="text-gradient-gold">Where are You Losing Marks?</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-                Most students practice blindly without realizing which specific chapters or question styles cost them ranks. Our diagnostic system makes your preparation surgical and stress-free.
-              </p>
-            </div>
-
-            {/* Core Highlights 4-Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {HIGHLIGHT_CARDS.map((card, idx) => {
-                const Icon = card.icon;
-                return (
-                  <div
-                    key={idx}
-                    className={`p-5 rounded-2xl bg-white dark:bg-navy-950/80 border ${card.borderColor} dark:border-white/[0.08] dark:hover:border-gold-500/40 shadow-sm hover:shadow-md dark:shadow-md dark:hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between`}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                          {card.badge}
-                        </span>
-                        <Icon className={`w-5 h-5 ${card.iconColor}`} />
-                      </div>
-                      <h4 className="font-display font-bold text-slate-900 dark:text-white text-base">
-                        {card.title}
-                      </h4>
-                      <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                        {card.description}
-                      </p>
-                    </div>
-                    <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1 text-[11px] font-semibold text-blue-700 dark:text-gold-400">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-trust-500" />
-                      <span>100% Complimentary</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* How It Works 4-Step Process */}
-          <div className="bg-slate-50/90 dark:bg-navy-950/70 rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-white/[0.08] mb-6">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center mb-5">
-              How the Diagnostic Challenge Works
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {STEPS.map((step, idx) => (
-                <div key={idx} className="relative flex flex-col items-center text-center">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 dark:bg-gradient-to-br dark:from-gold-300 dark:to-gold-500 text-white dark:text-navy-950 font-black text-sm flex items-center justify-center mb-3 shadow-md dark:shadow-glow-champagne">
-                    {step.step}
-                  </div>
-                  <h4 className="font-display font-bold text-slate-900 dark:text-white text-sm">
-                    {step.title}
-                  </h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom Security / Trust Guarantees */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] text-slate-500 dark:text-slate-400">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-trust-500" />
-              <span>100% Free with No Hidden Fees</span>
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1.5">
-              <Award className="w-3.5 h-3.5 text-blue-600 dark:text-gold-500" />
-              <span>Aligned with CBSE & Telangana State Board</span>
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-blue-500" />
-              <span>Instant 5-Page Detailed Diagnostic Report</span>
-            </span>
           </div>
 
         </div>
